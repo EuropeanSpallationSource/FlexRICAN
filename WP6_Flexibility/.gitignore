@@ -1,0 +1,16 @@
+# Archives
+*.zip
+*.tar.gz
+*.7z
+
+# Python temporary files
+__pycache__/
+*.py[cod]
+
+# Optimization solver logs/temp files
+*.log
+*.lp
+*.sol
+
+# Ignore the specific waste heat recovery project directory
+# Notebooks/lncmi/waste_heat_recovery_SGE_article/
