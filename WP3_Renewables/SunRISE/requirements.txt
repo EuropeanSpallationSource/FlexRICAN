@@ -1,3 +1,12 @@
-import pandas as pd
-import matplotlib.pyplot as plt
-import numpy as np
+pandas
+matplotlib
+numpy
+pvlib
+plotly
+pydeck
+shapely
+requests
+requests-cache
+retry-requests
+openmeteo-requests
+ipython

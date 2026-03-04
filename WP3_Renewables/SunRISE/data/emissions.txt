@@ -1,0 +1,64 @@
+{
+  "panel_type_factors": {
+    "Monocrystalline Silicon": {
+      "China": 55,
+      "USA": 40,
+      "Germany": 40,
+      "EU Average": 38,
+      "India": 60,
+      "France": 30,
+      "Australia": 40,
+      "Japan": 43,
+      "UK": 38,
+      "Sweden": 24
+    },
+    "Polycrystalline Silicon": {
+      "China": 45,
+      "USA": 35,
+      "Germany": 35,
+      "EU Average": 33,
+      "India": 52,
+      "France": 24,
+      "Australia": 34,
+      "Japan": 36,
+      "UK": 32,
+      "Sweden": 21
+    },
+    "Thin-film (CdTe,CIGS)": {
+      "China": 28,
+      "USA": 20,
+      "Germany": 22,
+      "EU Average": 22,
+      "India": 30,
+      "France": 15,
+      "Australia": 24,
+      "Japan": 24,
+      "UK": 20,
+      "Sweden": 12
+    },
+    "Perovskite-Si Tandem": {
+      "China": 33,
+      "USA": 25,
+      "Germany": 24,
+      "EU Average": 22,
+      "India": 36,
+      "France": 18,
+      "Australia": 25,
+      "Japan": 28,
+      "UK": 21,
+      "Sweden": 14
+    }
+  },
+  "grid_emission_factors": {
+    "China": 550,
+    "USA": 400,
+    "Germany": 400,
+    "EU Average": 350,
+    "India": 700,
+    "France": 50,
+    "Australia": 600,
+    "Japan": 500,
+    "UK": 200,
+    "Sweden": 20
+  }
+}
