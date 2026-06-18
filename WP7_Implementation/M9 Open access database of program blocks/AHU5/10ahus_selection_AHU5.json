@@ -1,0 +1,1831 @@
+{
+  "meta": {
+    "project": "10AHUs",
+    "version": "1.0",
+    "language": "cs",
+    "target": {
+      "environment": "CoDeSys",
+      "codesys_version": "3.5",
+      "iec": "61131-3",
+      "task_cycle_ms": 200
+    }
+  },
+  "ahu": {
+    "name": "AHU_01",
+    "components": [
+      {
+        "id": "group-1781552002563",
+        "nodeType": "groupNode",
+        "type": "groupNode",
+        "title": "group-1781552002563",
+        "parentId": null,
+        "x": 376.61658862218394,
+        "y": 2140.178569623538,
+        "width": 1085.840563571392,
+        "height": 397.8262338132124,
+        "zIndex": -1,
+        "props": {
+          "label": "FreshAir Unit1",
+          "svgUrl": "",
+          "category": "__group__",
+          "scale": 1,
+          "baseWidth": 1086,
+          "baseHeight": 398
+        }
+      },
+      {
+        "id": "QAsvgTagged_Test_Air_AHU-Duct-End-Left-1781552002563-o198h",
+        "nodeType": "svgNode",
+        "type": "QAsvgTagged_Test_Air_AHU-Duct-End-Left",
+        "title": "AHU-Duct-End-Left",
+        "parentId": "group-1781552002563",
+        "x": 145.77132890861256,
+        "y": 192.76675465250742,
+        "width": 26,
+        "height": 90,
+        "zIndex": 0,
+        "props": {
+          "name": "AHU-Duct-End-Left",
+          "tag": "AHU-Duct-End-Left",
+          "type": "QAsvgTagged_Test_Air_AHU-Duct-End-Left",
+          "baseWidth": 26,
+          "baseHeight": 90,
+          "scale": 1,
+          "topic": null,
+          "hideLabel": true
+        }
+      },
+      {
+        "id": "QAsvgTagged_Test_Air_AHU-Duct-Mid-Hor-1781552002563-ymtog",
+        "nodeType": "svgNode",
+        "type": "QAsvgTagged_Test_Air_AHU-Duct-Mid-Hor",
+        "title": "AHU-Duct-Mid-Hor",
+        "parentId": "group-1781552002563",
+        "x": 160.77132890861256,
+        "y": 192.76675465250742,
+        "width": 720,
+        "height": 90,
+        "zIndex": 0,
+        "props": {
+          "name": "AHU-Duct-Mid-Hor",
+          "tag": "AHU-Duct-Mid-Hor",
+          "type": "QAsvgTagged_Test_Air_AHU-Duct-Mid-Hor",
+          "baseWidth": 720,
+          "baseHeight": 90,
+          "scale": 1,
+          "topic": null,
+          "hideLabel": true
+        }
+      },
+      {
+        "id": "QAsvgTagged_Test_Air_AHU-Duct-End-Right-1781552002563-p1poz",
+        "nodeType": "svgNode",
+        "type": "QAsvgTagged_Test_Air_AHU-Duct-End-Right",
+        "title": "AHU-Duct-End-Right",
+        "parentId": "group-1781552002563",
+        "x": 865.7713289086125,
+        "y": 192.76675465250742,
+        "width": 26,
+        "height": 90,
+        "zIndex": 0,
+        "props": {
+          "name": "AHU-Duct-End-Right",
+          "tag": "AHU-Duct-End-Right",
+          "type": "QAsvgTagged_Test_Air_AHU-Duct-End-Right",
+          "baseWidth": 26,
+          "baseHeight": 90,
+          "scale": 1,
+          "topic": null,
+          "hideLabel": true
+        }
+      },
+      {
+        "id": "QAsvgTagged_Test_Air_AHU-Duct-Mid-Hor-1781552002563-v1olj",
+        "nodeType": "svgNode",
+        "type": "QAsvgTagged_Test_Air_AHU-Duct-Mid-Hor",
+        "title": "AHU-Duct-Mid-Hor",
+        "parentId": "group-1781552002563",
+        "x": 70.77132890861256,
+        "y": 117.76675465250736,
+        "width": 780,
+        "height": 90,
+        "zIndex": 0,
+        "props": {
+          "name": "AHU-Duct-Mid-Hor",
+          "tag": "AHU-Duct-Mid-Hor",
+          "type": "QAsvgTagged_Test_Air_AHU-Duct-Mid-Hor",
+          "baseWidth": 780,
+          "baseHeight": 90,
+          "scale": 1,
+          "topic": null,
+          "hideLabel": true
+        }
+      },
+      {
+        "id": "Symbols_AirSystems_Duct_Duct_AHU-Duct-End-Left-1781552002563-4jtr9",
+        "nodeType": "svgNode",
+        "type": "Symbols_AirSystems_Duct_Duct_AHU-Duct-End-Left",
+        "title": "AHU-Duct-End-Left",
+        "parentId": "group-1781552002563",
+        "x": 55.77132890861256,
+        "y": 117.76675465250736,
+        "width": 26,
+        "height": 90,
+        "zIndex": 0,
+        "props": {
+          "name": "AHU-Duct-End-Left",
+          "tag": "AHU-Duct-End-Left",
+          "type": "Symbols_AirSystems_Duct_Duct_AHU-Duct-End-Left",
+          "baseWidth": 26,
+          "baseHeight": 90,
+          "scale": 1,
+          "topic": null,
+          "hideLabel": true
+        }
+      },
+      {
+        "id": "Symbols_AirSystems_Duct_Duct_AHU-Duct-End-Right-1781552002563-9rzoi",
+        "nodeType": "svgNode",
+        "type": "Symbols_AirSystems_Duct_Duct_AHU-Duct-End-Right",
+        "title": "AHU-Duct-End-Right",
+        "parentId": "group-1781552002563",
+        "x": 835.7713289086125,
+        "y": 117.76675465250736,
+        "width": 26,
+        "height": 90,
+        "zIndex": 0,
+        "props": {
+          "name": "AHU-Duct-End-Right",
+          "tag": "AHU-Duct-End-Right",
+          "type": "Symbols_AirSystems_Duct_Duct_AHU-Duct-End-Right",
+          "baseWidth": 26,
+          "baseHeight": 90,
+          "scale": 1,
+          "topic": null,
+          "hideLabel": true
+        }
+      },
+      {
+        "id": "AHU_SEQUENCE-1781552002563-0fhj5",
+        "nodeType": "svgNode",
+        "type": "AHU_SEQUENCE",
+        "title": "AHU_SEQUENCE",
+        "parentId": "group-1781552002563",
+        "x": 403.9820981626582,
+        "y": 24,
+        "width": 36,
+        "height": 36,
+        "zIndex": 0,
+        "props": {
+          "name": "AHU_SEQUENCE",
+          "tag": "AHU_SEQUENCE",
+          "type": "AHU_SEQUENCE",
+          "baseWidth": 90,
+          "baseHeight": 90,
+          "scale": 0.4,
+          "topic": "test_projekt_1_garda/ahu3/sequence",
+          "hideLabel": false,
+          "modeDefault": "AUTO",
+          "states": "OFF,STARTUP,RUN,FROST,FIRE,FAULT,SHUTDOWN",
+          "primaryTempControl": "CASCADE_ROOM_TO_SUPPLY",
+          "supplyTempSpC": 18,
+          "roomTempSpC": 22,
+          "minSupplyTempC": 12,
+          "maxSupplyTempC": 30,
+          "startupDamperWaitS": 20,
+          "startupFanWaitS": 10,
+          "shutdownPurgeS": 0,
+          "fireBehavior": "FANS_OFF_DAMPERS_CLOSE",
+          "componentName": "sequence"
+        }
+      },
+      {
+        "id": "Symbols_WaterSystems_Piping__Arrows_Arrow-CHWS-1781552002563-ctu7r",
+        "nodeType": "svgNode",
+        "type": "Symbols_WaterSystems_Piping__Arrows_Arrow-CHWS",
+        "title": "Arrow-CHWS",
+        "parentId": "group-1781552002563",
+        "x": 104.3642514974195,
+        "y": 219.52132863725933,
+        "width": 16,
+        "height": 48,
+        "zIndex": 0,
+        "props": {
+          "name": "Arrow-CHWS",
+          "tag": "Arrow-CHWS",
+          "type": "Symbols_WaterSystems_Piping__Arrows_Arrow-CHWS",
+          "baseWidth": 20,
+          "baseHeight": 60,
+          "scale": 0.8,
+          "topic": null,
+          "hideLabel": true,
+          "variantState": "Down",
+          "rotate": 90
+        }
+      },
+      {
+        "id": "Symbols_WaterSystems_Piping__Arrows_Arrow-CWR-1781552002563-d15ue",
+        "nodeType": "svgNode",
+        "type": "Symbols_WaterSystems_Piping__Arrows_Arrow-CWR",
+        "title": "Arrow-CWR",
+        "parentId": "group-1781552002563",
+        "x": 24,
+        "y": 143.52474686065085,
+        "width": 16,
+        "height": 48,
+        "zIndex": 0,
+        "props": {
+          "name": "Arrow-CWR",
+          "tag": "Arrow-CWR",
+          "type": "Symbols_WaterSystems_Piping__Arrows_Arrow-CWR",
+          "baseWidth": 20,
+          "baseHeight": 60,
+          "scale": 0.8,
+          "topic": null,
+          "hideLabel": true,
+          "variantState": "Down",
+          "rotate": -90
+        }
+      },
+      {
+        "id": "Symbols_WaterSystems_Piping__Arrows_Arrow-White-1781552002563-ekddd",
+        "nodeType": "svgNode",
+        "type": "Symbols_WaterSystems_Piping__Arrows_Arrow-White",
+        "title": "Arrow-White",
+        "parentId": "group-1781552002563",
+        "x": 625.7713289086125,
+        "y": 132.76675465250736,
+        "width": 16,
+        "height": 72,
+        "zIndex": 0,
+        "props": {
+          "name": "Arrow-White",
+          "tag": "Arrow-White",
+          "type": "Symbols_WaterSystems_Piping__Arrows_Arrow-White",
+          "baseWidth": 20,
+          "baseHeight": 90,
+          "scale": 0.8,
+          "topic": null,
+          "hideLabel": true,
+          "variantState": "Down",
+          "rotate": 90
+        }
+      },
+      {
+        "id": "shapeNode-1781552002563-jxqcf",
+        "nodeType": "shapeNode",
+        "type": "shapeNode",
+        "title": "ROOM",
+        "parentId": "group-1781552002563",
+        "x": 844.8405635713922,
+        "y": 55.77150727498247,
+        "width": 217,
+        "height": 311,
+        "zIndex": -3,
+        "props": {
+          "name": "ROOM",
+          "tag": "ROOM",
+          "type": "shapeNode",
+          "baseWidth": 217,
+          "baseHeight": 310,
+          "scale": 1,
+          "topic": null,
+          "svgUrl": "",
+          "category": "__shape__",
+          "shape": "rect",
+          "label": "",
+          "fillColor": "#d6d6d6",
+          "strokeColor": "#94a3b8",
+          "strokeWidth": 2,
+          "borderRadius": 8,
+          "opacity": 1
+        }
+      },
+      {
+        "id": "groupNode-1781552002563-m9trc",
+        "nodeType": "groupNode",
+        "type": "groupNode",
+        "title": "group-1775552602342",
+        "parentId": "group-1781552002563",
+        "x": 83.873431885609,
+        "y": 108.52091509197356,
+        "width": 389.0225683802715,
+        "height": 196.6000000000001,
+        "zIndex": -1,
+        "props": {
+          "name": "group-1775552602342",
+          "type": "groupNode",
+          "baseWidth": 389,
+          "baseHeight": 197,
+          "scale": 1,
+          "topic": null,
+          "label": "Klap_Bypass ",
+          "svgUrl": "",
+          "category": "__group__"
+        }
+      },
+      {
+        "id": "DAMPER_INLET-1781552002563-8zbdt",
+        "nodeType": "svgNode",
+        "type": "DAMPER_INLET",
+        "title": "Exhaust-Damper-Parallel-with_Act-Vertical",
+        "parentId": "group-1781552002563",
+        "x": 191.1498997396275,
+        "y": 206.8755185934856,
+        "width": 22,
+        "height": 72,
+        "zIndex": 0,
+        "props": {
+          "name": "Damper-Parallel-with_Act-Vertical",
+          "tag": "Exhaust-Damper-Parallel-with_Act-Vertical",
+          "type": "DAMPER_INLET",
+          "baseWidth": 28,
+          "baseHeight": 90,
+          "scale": 0.79,
+          "topic": "test_projekt_1_garda/ahu3/damper_exhaust",
+          "svgUrl": "/svgs/Symbols/AirSystems/Dampers/With_Actuator/Damper-Parallel-with_Act-Vertical-0000.svg",
+          "category": "With_Actuator",
+          "hideLabel": true,
+          "actuation": "MODULATING",
+          "failPos": "CLOSE",
+          "hasFbOpen": false,
+          "hasFbClosed": false,
+          "openTimeS": 120,
+          "componentName": "damper_exhaust"
+        }
+      },
+      {
+        "id": "DAMPER_INLET-1781552002563-enz40",
+        "nodeType": "svgNode",
+        "type": "DAMPER_INLET",
+        "title": "Inlet-Damper-Parallel-with_Act-Vertical",
+        "parentId": "group-1781552002563",
+        "x": 107.03790098254504,
+        "y": 132.99146815515246,
+        "width": 22,
+        "height": 72,
+        "zIndex": 0,
+        "props": {
+          "name": "Damper-Parallel-with_Act-Vertical",
+          "tag": "Inlet-Damper-Parallel-with_Act-Vertical",
+          "type": "DAMPER_INLET",
+          "baseWidth": 28,
+          "baseHeight": 90,
+          "scale": 0.79,
+          "topic": "test_projekt_1_garda/ahu3/damper_inlet",
+          "svgUrl": "/svgs/Symbols/AirSystems/Dampers/With_Actuator/Damper-Parallel-with_Act-Vertical-0000.svg",
+          "category": "With_Actuator",
+          "hideLabel": true,
+          "actuation": "MODULATING",
+          "failPos": "CLOSE",
+          "hasFbOpen": false,
+          "hasFbClosed": false,
+          "openTimeS": 120,
+          "componentName": "damper_inlet"
+        }
+      },
+      {
+        "id": "groupNode-1781552002563-fmdpu",
+        "nodeType": "groupNode",
+        "type": "groupNode",
+        "title": "group-1775558396399",
+        "parentId": "group-1781552002563",
+        "x": 691.7713289086125,
+        "y": 183.76675465250742,
+        "width": 138,
+        "height": 130,
+        "zIndex": -1,
+        "props": {
+          "name": "group-1775558396399",
+          "type": "groupNode",
+          "baseWidth": 138,
+          "baseHeight": 130,
+          "scale": 1,
+          "topic": null,
+          "label": "Supply_Vent",
+          "svgUrl": "",
+          "category": "__group__"
+        }
+      },
+      {
+        "id": "Symbols_AirSystems_Sensors_Sensor-DifferentialPressure-Bottom-1781552002563-zhecl",
+        "nodeType": "svgNode",
+        "type": "Symbols_AirSystems_Sensors_Sensor-DifferentialPressure-Bottom",
+        "title": "Supply-Fan-Sensor-DifferentialPressure-Bottom",
+        "parentId": "group-1781552002563",
+        "x": 717.8284717657552,
+        "y": 268.96675465250735,
+        "width": 90,
+        "height": 22,
+        "zIndex": 0,
+        "props": {
+          "name": "Sensor-DifferentialPressure-Bottom",
+          "tag": "Supply-Fan-Sensor-DifferentialPressure-Bottom",
+          "type": "Symbols_AirSystems_Sensors_Sensor-DifferentialPressure-Bottom",
+          "baseWidth": 90,
+          "baseHeight": 22,
+          "scale": 1,
+          "topic": null,
+          "hideLabel": true
+        }
+      },
+      {
+        "id": "FAN_SUPPLY_VFD-1781552002563-pcx4r",
+        "nodeType": "svgNode",
+        "type": "FAN_SUPPLY_VFD",
+        "title": "SUPPLY_FAN_VFD",
+        "parentId": "group-1781552002563",
+        "x": 712.3427574800411,
+        "y": 206.22389750965021,
+        "width": 90,
+        "height": 68,
+        "zIndex": 0,
+        "props": {
+          "name": "FAN_SUPPLY_VFD",
+          "tag": "SUPPLY_FAN_VFD",
+          "type": "FAN_SUPPLY_VFD",
+          "baseWidth": 90,
+          "baseHeight": 68,
+          "scale": 1,
+          "topic": "test_projekt_1_garda/ahu3/fan_supply",
+          "hideLabel": true,
+          "variantState": "ON",
+          "startMode": "RAMP",
+          "minSpeedPct": 20,
+          "maxSpeedPct": 100,
+          "speedSpPct": 60,
+          "hasRunFb": true,
+          "hasFault": true,
+          "showPanel": false,
+          "panelAttributes": [
+            {
+              "key": "tag",
+              "label": "Tag",
+              "visible": true,
+              "unit": ""
+            },
+            {
+              "key": "variantState",
+              "label": "State / Variant",
+              "visible": true,
+              "unit": ""
+            },
+            {
+              "key": "startMode",
+              "label": "Start mode",
+              "visible": true,
+              "unit": ""
+            },
+            {
+              "key": "minSpeedPct",
+              "label": "Min speed (%)",
+              "visible": true,
+              "unit": ""
+            },
+            {
+              "key": "maxSpeedPct",
+              "label": "Max speed (%)",
+              "visible": true,
+              "unit": ""
+            },
+            {
+              "key": "speedSpPct",
+              "label": "Speed setpoint (%)",
+              "visible": true,
+              "unit": ""
+            },
+            {
+              "key": "hasRunFb",
+              "label": "Run feedback",
+              "visible": true,
+              "unit": ""
+            },
+            {
+              "key": "hasFault",
+              "label": "Fault feedback",
+              "visible": true,
+              "unit": ""
+            }
+          ],
+          "panelX": -0.16398877903398112,
+          "panelY": 250.92282663651707,
+          "componentName": "fan_supply"
+        }
+      },
+      {
+        "id": "groupNode-1781552002563-vmtn7",
+        "nodeType": "groupNode",
+        "type": "groupNode",
+        "title": "group-1775558414831",
+        "parentId": "group-1781552002563",
+        "x": 466.77132890861253,
+        "y": 78.76675465250736,
+        "width": 138,
+        "height": 146,
+        "zIndex": -1,
+        "props": {
+          "name": "group-1775558414831",
+          "type": "groupNode",
+          "baseWidth": 138,
+          "baseHeight": 146,
+          "scale": 1,
+          "topic": null,
+          "label": "Exhaust_Vent",
+          "svgUrl": "",
+          "category": "__group__",
+          "hideLabel": true,
+          "hideHandles": false
+        }
+      },
+      {
+        "id": "Symbols_AirSystems_Sensors_Sensor-DifferentialPressure-Top-1781552002563-foj4u",
+        "nodeType": "svgNode",
+        "type": "Symbols_AirSystems_Sensors_Sensor-DifferentialPressure-Top",
+        "title": "EXHAUST-Fan-Sensor-DifferentialPressure-Top",
+        "parentId": "group-1781552002563",
+        "x": 483.31418605146973,
+        "y": 110.22389750965021,
+        "width": 90,
+        "height": 32,
+        "zIndex": 0,
+        "props": {
+          "name": "Sensor-DifferentialPressure-Top",
+          "tag": "EXHAUST-Fan-Sensor-DifferentialPressure-Top",
+          "type": "Symbols_AirSystems_Sensors_Sensor-DifferentialPressure-Top",
+          "baseWidth": 90,
+          "baseHeight": 32,
+          "scale": 1,
+          "topic": null,
+          "hideLabel": true
+        }
+      },
+      {
+        "id": "FAN_EXHAUST_VFD-1781552002563-0rr9a",
+        "nodeType": "svgNode",
+        "type": "FAN_EXHAUST_VFD",
+        "title": "EXHAUST_FAN_VFD",
+        "parentId": "group-1781552002563",
+        "x": 495.6570431943268,
+        "y": 133.36675465250732,
+        "width": 90,
+        "height": 68,
+        "zIndex": 0,
+        "props": {
+          "name": "FAN_EXHAUST_VFD",
+          "tag": "EXHAUST_FAN_VFD",
+          "type": "FAN_EXHAUST_VFD",
+          "baseWidth": 90,
+          "baseHeight": 68,
+          "scale": 1,
+          "topic": "test_projekt_1_garda/ahu3/fan_exhaust",
+          "hideLabel": true,
+          "variantState": "ON",
+          "tracking": "FOLLOW_SUPPLY",
+          "startMode": "RAMP",
+          "minSpeedPct": 20,
+          "maxSpeedPct": 100,
+          "trackingOffsetPct": 0,
+          "speedSpPct": 60,
+          "hasRunFb": true,
+          "hasFault": true,
+          "flipH": true,
+          "showPanel": false,
+          "panelAttributes": [
+            {
+              "key": "tag",
+              "label": "Tag",
+              "visible": false,
+              "unit": ""
+            },
+            {
+              "key": "variantState",
+              "label": "State / Variant",
+              "visible": true,
+              "unit": ""
+            },
+            {
+              "key": "tracking",
+              "label": "Tracking",
+              "visible": false,
+              "unit": ""
+            },
+            {
+              "key": "startMode",
+              "label": "Start mode",
+              "visible": true,
+              "unit": ""
+            },
+            {
+              "key": "minSpeedPct",
+              "label": "Min speed (%)",
+              "visible": true,
+              "unit": ""
+            },
+            {
+              "key": "maxSpeedPct",
+              "label": "Max speed (%)",
+              "visible": true,
+              "unit": ""
+            },
+            {
+              "key": "trackingOffsetPct",
+              "label": "Tracking offset (%)",
+              "visible": true,
+              "unit": ""
+            },
+            {
+              "key": "speedSpPct",
+              "label": "Speed setpoint (%)",
+              "visible": true,
+              "unit": ""
+            },
+            {
+              "key": "hasRunFb",
+              "label": "Run feedback",
+              "visible": true,
+              "unit": ""
+            },
+            {
+              "key": "hasFault",
+              "label": "Fault feedback",
+              "visible": true,
+              "unit": ""
+            }
+          ],
+          "panelX": -13.323243946345384,
+          "panelY": 333.58271629601074,
+          "componentName": "fan_exhaust"
+        }
+      },
+      {
+        "id": "Symbols_AirSystems_Sensors_Sensor-DifferentialPressure-Top-1781552002563-8vj3y",
+        "nodeType": "svgNode",
+        "type": "Symbols_AirSystems_Sensors_Sensor-DifferentialPressure-Top",
+        "title": "EXHAUST-Sensor-DifferentialPressure-Top",
+        "parentId": "group-1781552002563",
+        "x": 671.199900337184,
+        "y": 108.85246893822165,
+        "width": 90,
+        "height": 32,
+        "zIndex": 0,
+        "props": {
+          "name": "Sensor-DifferentialPressure-Top",
+          "tag": "EXHAUST-Sensor-DifferentialPressure-Top",
+          "type": "Symbols_AirSystems_Sensors_Sensor-DifferentialPressure-Top",
+          "baseWidth": 90,
+          "baseHeight": 32,
+          "scale": 1,
+          "topic": null,
+          "hideLabel": true
+        }
+      },
+      {
+        "id": "Symbols_AirSystems_Filters_Filter-Bank-1781552002563-sqcu8",
+        "nodeType": "svgNode",
+        "type": "Symbols_AirSystems_Filters_Filter-Bank",
+        "title": "EXHAUST-Filter-Bank",
+        "parentId": "group-1781552002563",
+        "x": 701.1999003371839,
+        "y": 131.99532608107876,
+        "width": 36,
+        "height": 72,
+        "zIndex": 0,
+        "props": {
+          "name": "Filter-Bank",
+          "tag": "EXHAUST-Filter-Bank",
+          "type": "Symbols_AirSystems_Filters_Filter-Bank",
+          "baseWidth": 45,
+          "baseHeight": 90,
+          "scale": 0.8,
+          "topic": null,
+          "hideLabel": true,
+          "variantState": "0",
+          "flipH": true
+        }
+      },
+      {
+        "id": "groupNode-1781552002563-y2l11",
+        "nodeType": "groupNode",
+        "type": "groupNode",
+        "title": "group-1775558466327",
+        "parentId": "group-1781552002563",
+        "x": 195.51766715015881,
+        "y": 183.76675465250742,
+        "width": 138,
+        "height": 134.2882784926984,
+        "zIndex": -1,
+        "props": {
+          "name": "group-1775558466327",
+          "type": "groupNode",
+          "baseWidth": 138,
+          "baseHeight": 134.2882784926984,
+          "scale": 1,
+          "topic": null,
+          "label": "Inlet_Filter",
+          "svgUrl": "",
+          "category": "__group__"
+        }
+      },
+      {
+        "id": "Symbols_AirSystems_Sensors_Sensor-DifferentialPressure-Top-1781552002563-016rs",
+        "nodeType": "svgNode",
+        "type": "Symbols_AirSystems_Sensors_Sensor-DifferentialPressure-Top",
+        "title": "Inlet-Sensor-FilterDifferentialPressure-Top",
+        "parentId": "group-1781552002563",
+        "x": 193.1889435931683,
+        "y": 110.88702279716853,
+        "width": 90,
+        "height": 32,
+        "zIndex": 0,
+        "props": {
+          "name": "Sensor-DifferentialPressure-Top",
+          "tag": "Inlet-Sensor-FilterDifferentialPressure-Top",
+          "type": "Symbols_AirSystems_Sensors_Sensor-DifferentialPressure-Top",
+          "baseWidth": 90,
+          "baseHeight": 32,
+          "scale": 1,
+          "topic": null,
+          "hideLabel": true,
+          "flipV": false
+        }
+      },
+      {
+        "id": "Symbols_AirSystems_Filters_Filter-Bank-1781552002563-vlj2s",
+        "nodeType": "svgNode",
+        "type": "Symbols_AirSystems_Filters_Filter-Bank",
+        "title": "Inlet-Filter-Bank",
+        "parentId": "group-1781552002563",
+        "x": 219.82788975698875,
+        "y": 134.3332820898297,
+        "width": 36,
+        "height": 72,
+        "zIndex": 0,
+        "props": {
+          "name": "Filter-Bank",
+          "tag": "Inlet-Filter-Bank",
+          "type": "Symbols_AirSystems_Filters_Filter-Bank",
+          "baseWidth": 45,
+          "baseHeight": 90,
+          "scale": 0.8,
+          "topic": null,
+          "hideLabel": true,
+          "variantState": "0"
+        }
+      },
+      {
+        "id": "SENSOR_TEMPERATURE-1781552002563-fdybm",
+        "nodeType": "svgNode",
+        "type": "SENSOR_TEMPERATURE",
+        "title": "Sensor-TempBulb-Top",
+        "parentId": "group-1781552002563",
+        "x": 151.09642703904808,
+        "y": 103.87130468124224,
+        "width": 27,
+        "height": 64,
+        "zIndex": 0,
+        "props": {
+          "name": "Sensor-TempBulb-Top",
+          "tag": "Sensor-TempBulb-Top",
+          "type": "SENSOR_TEMPERATURE",
+          "baseWidth": 38,
+          "baseHeight": 90,
+          "scale": 0.71,
+          "topic": "test_projekt_1_garda/ahu3/temp_outdoor",
+          "svgUrl": "/svgs/Symbols/AirSystems/Sensors/Sensor-TempBulb-Top.svg",
+          "category": "Sensors",
+          "hideLabel": true,
+          "sensor_type": "Duct",
+          "measured_quantity": "Temperature",
+          "unit": "°C",
+          "min_measuring_range": -20,
+          "max_measuring_range": 80,
+          "accuracy": "",
+          "resolution": 0.1,
+          "sensor_element": "Ni1000",
+          "output_signal_type": "Passive",
+          "input_channel": "",
+          "alarm_low": null,
+          "alarm_high": null,
+          "warning_low": null,
+          "warning_high": null,
+          "network_address": "",
+          "remarks": "",
+          "flipV": false,
+          "componentName": "temp_outdoor"
+        }
+      },
+      {
+        "id": "Symbols_WaterSystems_Pumps_Inline-Pump-1781552002563-d8shi",
+        "nodeType": "svgNode",
+        "type": "Symbols_WaterSystems_Pumps_Inline-Pump",
+        "title": "Heating-circulation-Pump-Supply-Coil",
+        "parentId": "group-1781552002563",
+        "x": 546.7176097813933,
+        "y": 295.2099044614289,
+        "width": 21,
+        "height": 27,
+        "zIndex": 2,
+        "props": {
+          "name": "Inline-Pump",
+          "tag": "Heating-circulation-Pump-Supply-Coil",
+          "type": "Symbols_WaterSystems_Pumps_Inline-Pump",
+          "baseWidth": 70,
+          "baseHeight": 90,
+          "scale": 0.3,
+          "topic": null,
+          "hideLabel": true,
+          "variantState": "Vertical-ON-Down",
+          "rotate": 0
+        }
+      },
+      {
+        "id": "Symbols_WaterSystems_Piping_HWR_HWR-Vertical-Large-1781552002563-pqd4u",
+        "nodeType": "svgNode",
+        "type": "Symbols_WaterSystems_Piping_HWR_HWR-Vertical-Large",
+        "title": "HWR_HWR-Vertical-Large-Heater-Supply-Coil",
+        "parentId": "group-1781552002563",
+        "x": 545.4147921425867,
+        "y": 278.5813824129208,
+        "width": 11,
+        "height": 95,
+        "zIndex": 0,
+        "props": {
+          "name": "HWR_HWR-Vertical-Large",
+          "tag": "HWR_HWR-Vertical-Large-Heater-Supply-Coil",
+          "type": "Symbols_WaterSystems_Piping_HWR_HWR-Vertical-Large",
+          "baseWidth": 11,
+          "baseHeight": 95,
+          "scale": 1,
+          "topic": null,
+          "hideLabel": true
+        }
+      },
+      {
+        "id": "Symbols_WaterSystems_Valves_Valve-Electric3WayTopVerticalRight-1781552002563-b8928",
+        "nodeType": "svgNode",
+        "type": "Symbols_WaterSystems_Valves_Valve-Electric3WayTopVerticalRight",
+        "title": "Heating-Valve-Electric3WayTopVerticalRight-Heater-Supply-Coil",
+        "parentId": "group-1781552002563",
+        "x": 542.7176097813933,
+        "y": 325.2099044614289,
+        "width": 24,
+        "height": 36,
+        "zIndex": 4,
+        "props": {
+          "name": "Valve-Electric3WayTopVerticalRight",
+          "tag": "Heating-Valve-Electric3WayTopVerticalRight-Heater-Supply-Coil",
+          "type": "Symbols_WaterSystems_Valves_Valve-Electric3WayTopVerticalRight",
+          "baseWidth": 61,
+          "baseHeight": 90,
+          "scale": 0.39,
+          "topic": null,
+          "hideLabel": true
+        }
+      },
+      {
+        "id": "Symbols_WaterSystems_Piping_HWR_HWR-T-Right-1781552002563-sfr23",
+        "nodeType": "svgNode",
+        "type": "Symbols_WaterSystems_Piping_HWR_HWR-T-Right",
+        "title": "HWR-T-Right-Heater-Supply-Coil",
+        "parentId": "group-1781552002563",
+        "x": 524.8942732174804,
+        "y": 324.67294208036606,
+        "width": 18,
+        "height": 18,
+        "zIndex": 0,
+        "props": {
+          "name": "HWR-T-Right",
+          "tag": "HWR-T-Right-Heater-Supply-Coil",
+          "type": "Symbols_WaterSystems_Piping_HWR_HWR-T-Right",
+          "baseWidth": 90,
+          "baseHeight": 90,
+          "scale": 0.2,
+          "topic": null,
+          "hideLabel": true
+        }
+      },
+      {
+        "id": "HEATING_COIL_3WV-1781552002563-6olpf",
+        "nodeType": "svgNode",
+        "type": "HEATING_COIL_3WV",
+        "title": "Supply-Heating-Coil-DX-Groupe_1",
+        "parentId": "group-1781552002563",
+        "x": 529.7054256949953,
+        "y": 208.86988008567573,
+        "width": 34,
+        "height": 72,
+        "zIndex": 0,
+        "props": {
+          "name": "Coil-DX-Heating",
+          "tag": "Supply-Heating-Coil-DX-Groupe_1",
+          "type": "HEATING_COIL_3WV",
+          "baseWidth": 43,
+          "baseHeight": 90,
+          "scale": 0.79,
+          "topic": "test_projekt_1_garda/ahu3/heating_coil",
+          "svgUrl": "/svgs/Symbols/AirSystems/Coils/Coil-DX-Heating-25.svg",
+          "category": "Coils",
+          "hideLabel": true,
+          "valveType": "AO_0_10V",
+          "frostReaction": "PUMP_ON|VALVE_100|FANS_OFF|DAMPERS_CLOSE|ALARM_LATCH",
+          "frostEnable": true,
+          "pumpHasFb": false,
+          "tReturnTripC": 7,
+          "tReturnReleaseC": 10,
+          "pumpRunOnS": 120,
+          "componentName": "heating_coil"
+        }
+      },
+      {
+        "id": "SENSOR_TEMPERATURE-1781552002563-pea5a",
+        "nodeType": "svgNode",
+        "type": "SENSOR_TEMPERATURE",
+        "title": "Sensor-T-WaterTemp-RETURN-Heating-Supply-Coil",
+        "parentId": "group-1781552002563",
+        "x": 514.8923112757809,
+        "y": 309.6293507613434,
+        "width": 18,
+        "height": 18,
+        "zIndex": 0,
+        "props": {
+          "name": "Sensor-WaterTempVertical",
+          "tag": "Sensor-T-WaterTemp-RETURN-Heating-Supply-Coil",
+          "type": "SENSOR_TEMPERATURE",
+          "baseWidth": 90,
+          "baseHeight": 88,
+          "scale": 0.2,
+          "topic": "test_projekt_1_garda/ahu3/temp_water_return",
+          "svgUrl": "/svgs/Symbols/WaterSystems/Sensors/Sensor-WaterTempVertical.svg",
+          "category": "Sensors",
+          "hideLabel": true,
+          "sensor_type": "Duct",
+          "measured_quantity": "Temperature",
+          "unit": "°C",
+          "min_measuring_range": -20,
+          "max_measuring_range": 80,
+          "accuracy": "",
+          "resolution": 0.1,
+          "sensor_element": "Ni1000",
+          "output_signal_type": "Passive",
+          "input_channel": "",
+          "alarm_low": 5,
+          "alarm_high": 60,
+          "warning_low": 10,
+          "warning_high": 55,
+          "network_address": "",
+          "remarks": "",
+          "flipH": true,
+          "showPanel": false,
+          "panelAttributes": [
+            {
+              "key": "tag",
+              "label": "Tag",
+              "visible": false,
+              "unit": ""
+            },
+            {
+              "key": "sensor_type",
+              "label": "Sensor type",
+              "visible": false,
+              "unit": ""
+            },
+            {
+              "key": "measured_quantity",
+              "label": "Measured quantity",
+              "visible": false,
+              "unit": ""
+            },
+            {
+              "key": "unit",
+              "label": "Unit",
+              "visible": false,
+              "unit": ""
+            },
+            {
+              "key": "min_measuring_range",
+              "label": "Min range",
+              "visible": false,
+              "unit": ""
+            },
+            {
+              "key": "max_measuring_range",
+              "label": "Max range",
+              "visible": false,
+              "unit": ""
+            },
+            {
+              "key": "accuracy",
+              "label": "Accuracy",
+              "visible": false,
+              "unit": ""
+            },
+            {
+              "key": "resolution",
+              "label": "Resolution",
+              "visible": false,
+              "unit": ""
+            },
+            {
+              "key": "sensor_element",
+              "label": "Sensor element",
+              "visible": false,
+              "unit": ""
+            },
+            {
+              "key": "output_signal_type",
+              "label": "Output signal",
+              "visible": false,
+              "unit": ""
+            },
+            {
+              "key": "input_channel",
+              "label": "Input channel",
+              "visible": false,
+              "unit": ""
+            },
+            {
+              "key": "alarm_low",
+              "label": "Alarm low",
+              "visible": false,
+              "unit": ""
+            },
+            {
+              "key": "alarm_high",
+              "label": "Alarm high",
+              "visible": false,
+              "unit": ""
+            },
+            {
+              "key": "warning_low",
+              "label": "Warning low",
+              "visible": false,
+              "unit": ""
+            },
+            {
+              "key": "warning_high",
+              "label": "Warning high",
+              "visible": false,
+              "unit": ""
+            },
+            {
+              "key": "network_address",
+              "label": "Network address",
+              "visible": false,
+              "unit": ""
+            },
+            {
+              "key": "remarks",
+              "label": "Remarks",
+              "visible": false,
+              "unit": ""
+            },
+            {
+              "key": "value_actual",
+              "label": "Current value",
+              "visible": true,
+              "unit": "°C"
+            },
+            {
+              "key": "value_filtered",
+              "label": "Filtered value",
+              "visible": false,
+              "unit": ""
+            },
+            {
+              "key": "raw_signal_value",
+              "label": "Raw signal",
+              "visible": false,
+              "unit": ""
+            },
+            {
+              "key": "scaled_value",
+              "label": "Scaled value",
+              "visible": false,
+              "unit": ""
+            },
+            {
+              "key": "status",
+              "label": "Status",
+              "visible": false,
+              "unit": ""
+            },
+            {
+              "key": "communication_status",
+              "label": "Comm. status",
+              "visible": false,
+              "unit": ""
+            }
+          ],
+          "panelX": -276.1207360282037,
+          "panelY": -15.637465451470149,
+          "componentName": "temp_water_return"
+        }
+      },
+      {
+        "id": "Symbols_WaterSystems_Piping_CHWS_CHWS-Vertical-Large-1781552002563-crj1y",
+        "nodeType": "svgNode",
+        "type": "Symbols_WaterSystems_Piping_CHWS_CHWS-Vertical-Large",
+        "title": "CHWS-Vertical-Large-Cooler-Supply-Coil",
+        "parentId": "group-1781552002563",
+        "x": 644.2570431943268,
+        "y": 276.5994423548477,
+        "width": 11,
+        "height": 95,
+        "zIndex": 0,
+        "props": {
+          "name": "CHWS-Vertical-Large",
+          "tag": "CHWS-Vertical-Large-Cooler-Supply-Coil",
+          "type": "Symbols_WaterSystems_Piping_CHWS_CHWS-Vertical-Large",
+          "baseWidth": 11,
+          "baseHeight": 95,
+          "scale": 1,
+          "topic": null,
+          "hideLabel": true
+        }
+      },
+      {
+        "id": "Symbols_WaterSystems_Piping_CHWS_CHWS-Vertical-Large-1781552002563-q3wqb",
+        "nodeType": "svgNode",
+        "type": "Symbols_WaterSystems_Piping_CHWS_CHWS-Vertical-Large",
+        "title": "CHWS-Vertical-Large-Cooler-Supply-Coil",
+        "parentId": "group-1781552002563",
+        "x": 657.2570431943268,
+        "y": 276.5994423548477,
+        "width": 11,
+        "height": 95,
+        "zIndex": 0,
+        "props": {
+          "name": "CHWS-Vertical-Large",
+          "tag": "CHWS-Vertical-Large-Cooler-Supply-Coil",
+          "type": "Symbols_WaterSystems_Piping_CHWS_CHWS-Vertical-Large",
+          "baseWidth": 11,
+          "baseHeight": 95,
+          "scale": 1,
+          "topic": null,
+          "hideLabel": true
+        }
+      },
+      {
+        "id": "COOLING_COIL-1781552002563-6hy0i",
+        "nodeType": "svgNode",
+        "type": "COOLING_COIL",
+        "title": "Supply-Cooling-Coil-DX-G2",
+        "parentId": "group-1781552002563",
+        "x": 645.3323046745214,
+        "y": 206.22389750965021,
+        "width": 34,
+        "height": 72,
+        "zIndex": 0,
+        "props": {
+          "name": "Coil-DX-Cooling",
+          "tag": "Supply-Cooling-Coil-DX-G2",
+          "type": "COOLING_COIL",
+          "baseWidth": 43,
+          "baseHeight": 90,
+          "scale": 0.79,
+          "topic": "test_projekt_1_garda/ahu3/cooling_coil",
+          "svgUrl": "/svgs/Symbols/AirSystems/Coils/Coil-DX-Cooling-25.svg",
+          "category": "Coils",
+          "hideLabel": true,
+          "valveType": "AO_0_10V",
+          "minSupplyTempC": 12,
+          "componentName": "cooling_coil"
+        }
+      },
+      {
+        "id": "Symbols_WaterSystems_Valves_Valve-Electric2WayTopVerticalRight-1781552002563-2fo9r",
+        "nodeType": "svgNode",
+        "type": "Symbols_WaterSystems_Valves_Valve-Electric2WayTopVerticalRight",
+        "title": "Valve-Electric2WayTopVerticalRight",
+        "parentId": "group-1781552002563",
+        "x": 657.301180813715,
+        "y": 319.5397153683575,
+        "width": 22,
+        "height": 36,
+        "zIndex": 0,
+        "props": {
+          "name": "Valve-Electric2WayTopVerticalRight",
+          "tag": "Valve-Electric2WayTopVerticalRight",
+          "type": "Symbols_WaterSystems_Valves_Valve-Electric2WayTopVerticalRight",
+          "baseWidth": 55,
+          "baseHeight": 90,
+          "scale": 0.4,
+          "topic": null,
+          "svgUrl": "/svgs/Symbols/WaterSystems/Valves/Valve-Electric2WayTopVerticalRight.svg",
+          "category": "Valves",
+          "hideLabel": true
+        }
+      },
+      {
+        "id": "SENSOR_TEMP_HUMIDITY-1781552002563-o7vua",
+        "nodeType": "svgNode",
+        "type": "SENSOR_TEMP_HUMIDITY",
+        "title": "EXHAUST-Sensor-TempHumidity-Top",
+        "parentId": "group-1781552002563",
+        "x": 799.9630134429799,
+        "y": 113.17009789288744,
+        "width": 23,
+        "height": 55,
+        "zIndex": 0,
+        "props": {
+          "name": "Sensor-TempHumidity-Top",
+          "tag": "EXHAUST-Sensor-TempHumidity-Top",
+          "type": "SENSOR_TEMP_HUMIDITY",
+          "baseWidth": 38,
+          "baseHeight": 90,
+          "scale": 0.61,
+          "topic": "test_projekt_1_garda/ahu3/th_exhaust",
+          "svgUrl": "/svgs/Symbols/AirSystems/Sensors/Sensor-TempHumidity-Top.svg",
+          "category": "Sensors",
+          "hideLabel": true,
+          "sensor_type": "Duct",
+          "measured_quantity": "Temperature + Relative Humidity",
+          "unit_temperature": "°C",
+          "unit_humidity": "%RH",
+          "min_temperature_measuring_range": -20,
+          "min_humidity_measuring_range": 0,
+          "max_temperature_measuring_range": 60,
+          "max_humidity_measuring_range": 100,
+          "accuracy_temperature": "",
+          "accuracy_humidity": "",
+          "resolution_temperature": 0.1,
+          "resolution_humidity": 0.1,
+          "output_signal_type": "0-10V",
+          "input_channel": "",
+          "alarm_temperature_low": null,
+          "alarm_humidity_low": null,
+          "alarm_temperature_high": null,
+          "alarm_humidity_high": null,
+          "warning_temperature_low": null,
+          "warning_humidity_low": null,
+          "warning_temperature_high": null,
+          "warning_humidity_high": null,
+          "network_address": "",
+          "remarks": "",
+          "componentName": "th_exhaust"
+        }
+      },
+      {
+        "id": "SENSOR_TEMP_HUMIDITY-1781552002563-t3bgc",
+        "nodeType": "svgNode",
+        "type": "SENSOR_TEMP_HUMIDITY",
+        "title": "Supply-Sensor-TempHumidity-Bottom",
+        "parentId": "group-1781552002563",
+        "x": 804.9033961046165,
+        "y": 240.52218428174422,
+        "width": 41,
+        "height": 55,
+        "zIndex": 0,
+        "props": {
+          "name": "Sensor-TempHumidity-Bottom",
+          "tag": "Supply-Sensor-TempHumidity-Bottom",
+          "type": "SENSOR_TEMP_HUMIDITY",
+          "baseWidth": 67,
+          "baseHeight": 90,
+          "scale": 0.61,
+          "topic": "test_projekt_1_garda/ahu3/th_supply",
+          "svgUrl": "/svgs/Symbols/AirSystems/Sensors/Sensor-TempHumidity-Bottom.svg",
+          "category": "Sensors",
+          "hideLabel": true,
+          "sensor_type": "Duct",
+          "measured_quantity": "Temperature + Relative Humidity",
+          "unit_temperature": "°C",
+          "unit_humidity": "%RH",
+          "min_temperature_measuring_range": -20,
+          "min_humidity_measuring_range": 0,
+          "max_temperature_measuring_range": 60,
+          "max_humidity_measuring_range": 100,
+          "accuracy_temperature": "",
+          "accuracy_humidity": "",
+          "resolution_temperature": 0.1,
+          "resolution_humidity": 0.1,
+          "output_signal_type": "0-10V",
+          "input_channel": "",
+          "alarm_temperature_low": null,
+          "alarm_humidity_low": null,
+          "alarm_temperature_high": null,
+          "alarm_humidity_high": null,
+          "warning_temperature_low": null,
+          "warning_humidity_low": null,
+          "warning_temperature_high": null,
+          "warning_humidity_high": null,
+          "network_address": "",
+          "remarks": "",
+          "componentName": "th_supply"
+        }
+      },
+      {
+        "id": "SENSOR_TEMPERATURE-1781552002563-cwiw9",
+        "nodeType": "svgNode",
+        "type": "SENSOR_TEMPERATURE",
+        "title": "Room_Temperature",
+        "parentId": "group-1781552002563",
+        "x": 937.1915619837421,
+        "y": 72.2295247833116,
+        "width": 31,
+        "height": 63,
+        "zIndex": 0,
+        "props": {
+          "name": "Temperature_Color",
+          "tag": "Room_Temperature",
+          "type": "SENSOR_TEMPERATURE",
+          "baseWidth": 45,
+          "baseHeight": 90,
+          "scale": 0.69,
+          "topic": "test_projekt_1_garda/ahu3/temp_room",
+          "svgUrl": "/svgs/Symbols/MISC/UI-Elements/Temperature_Color.svg",
+          "category": "UI-Elements",
+          "hideLabel": false,
+          "sensor_type": "Room",
+          "measured_quantity": "Temperature",
+          "unit": "°C",
+          "min_measuring_range": -20,
+          "max_measuring_range": 80,
+          "accuracy": "",
+          "resolution": 0.1,
+          "sensor_element": "Ni1000",
+          "output_signal_type": "Passive",
+          "input_channel": "",
+          "alarm_low": null,
+          "alarm_high": null,
+          "warning_low": null,
+          "warning_high": null,
+          "network_address": "",
+          "remarks": "",
+          "showPanel": true,
+          "panelAttributes": [
+            {
+              "key": "tag",
+              "label": "Tag",
+              "visible": false,
+              "unit": ""
+            },
+            {
+              "key": "sensor_type",
+              "label": "Sensor type",
+              "visible": false,
+              "unit": ""
+            },
+            {
+              "key": "measured_quantity",
+              "label": "Measured quantity",
+              "visible": false,
+              "unit": ""
+            },
+            {
+              "key": "unit",
+              "label": "Unit",
+              "visible": false,
+              "unit": ""
+            },
+            {
+              "key": "min_measuring_range",
+              "label": "Min range",
+              "visible": false,
+              "unit": ""
+            },
+            {
+              "key": "max_measuring_range",
+              "label": "Max range",
+              "visible": false,
+              "unit": ""
+            },
+            {
+              "key": "accuracy",
+              "label": "Accuracy",
+              "visible": false,
+              "unit": ""
+            },
+            {
+              "key": "resolution",
+              "label": "Resolution",
+              "visible": false,
+              "unit": ""
+            },
+            {
+              "key": "sensor_element",
+              "label": "Sensor element",
+              "visible": false,
+              "unit": ""
+            },
+            {
+              "key": "output_signal_type",
+              "label": "Output signal",
+              "visible": false,
+              "unit": ""
+            },
+            {
+              "key": "input_channel",
+              "label": "Input channel",
+              "visible": false,
+              "unit": ""
+            },
+            {
+              "key": "alarm_low",
+              "label": "Alarm low",
+              "visible": false,
+              "unit": ""
+            },
+            {
+              "key": "alarm_high",
+              "label": "Alarm high",
+              "visible": false,
+              "unit": ""
+            },
+            {
+              "key": "warning_low",
+              "label": "Warning low",
+              "visible": false,
+              "unit": ""
+            },
+            {
+              "key": "warning_high",
+              "label": "Warning high",
+              "visible": false,
+              "unit": ""
+            },
+            {
+              "key": "network_address",
+              "label": "Network address",
+              "visible": false,
+              "unit": ""
+            },
+            {
+              "key": "remarks",
+              "label": "Remarks",
+              "visible": false,
+              "unit": ""
+            },
+            {
+              "key": "value_actual",
+              "label": "Current value",
+              "visible": true,
+              "unit": "°C"
+            },
+            {
+              "key": "value_filtered",
+              "label": "Filtered value",
+              "visible": false,
+              "unit": ""
+            },
+            {
+              "key": "raw_signal_value",
+              "label": "Raw signal",
+              "visible": false,
+              "unit": ""
+            },
+            {
+              "key": "scaled_value",
+              "label": "Scaled value",
+              "visible": false,
+              "unit": ""
+            },
+            {
+              "key": "status",
+              "label": "Status",
+              "visible": false,
+              "unit": ""
+            },
+            {
+              "key": "communication_status",
+              "label": "Comm. status",
+              "visible": false,
+              "unit": ""
+            }
+          ],
+          "panelX": -37.11096277573941,
+          "panelY": 71,
+          "componentName": "temp_room"
+        }
+      },
+      {
+        "id": "SENSOR_HUMIDITY-1781552002563-1hmia",
+        "nodeType": "svgNode",
+        "type": "SENSOR_HUMIDITY",
+        "title": "Room_Humidity",
+        "parentId": "group-1781552002563",
+        "x": 940.4725799838968,
+        "y": 254.7944008598056,
+        "width": 27,
+        "height": 41,
+        "zIndex": 0,
+        "props": {
+          "name": "Humidity_Color",
+          "tag": "Room_Humidity",
+          "type": "SENSOR_HUMIDITY",
+          "baseWidth": 39,
+          "baseHeight": 59,
+          "scale": 0.69,
+          "topic": "test_projekt_1_garda/ahu3/rh_room",
+          "svgUrl": "/svgs/Symbols/MISC/UI-Elements/Humidity_Color.svg",
+          "category": "UI-Elements",
+          "hideLabel": false,
+          "sensor_type": "Room",
+          "measured_quantity": "Relative humidity",
+          "unit": "%RH",
+          "min_measuring_range": 0,
+          "max_measuring_range": 100,
+          "accuracy": "",
+          "resolution": 0.1,
+          "output_signal_type": "0-10V",
+          "input_channel": "",
+          "alarm_low": null,
+          "alarm_high": null,
+          "warning_low": null,
+          "warning_high": null,
+          "network_address": "",
+          "remarks": "",
+          "showPanel": true,
+          "panelAttributes": [
+            {
+              "key": "tag",
+              "label": "Tag",
+              "visible": false,
+              "unit": ""
+            },
+            {
+              "key": "sensor_type",
+              "label": "Sensor type",
+              "visible": false,
+              "unit": ""
+            },
+            {
+              "key": "measured_quantity",
+              "label": "Measured quantity",
+              "visible": false,
+              "unit": ""
+            },
+            {
+              "key": "unit",
+              "label": "Unit",
+              "visible": false,
+              "unit": ""
+            },
+            {
+              "key": "min_measuring_range",
+              "label": "Min range",
+              "visible": false,
+              "unit": ""
+            },
+            {
+              "key": "max_measuring_range",
+              "label": "Max range",
+              "visible": false,
+              "unit": ""
+            },
+            {
+              "key": "accuracy",
+              "label": "Accuracy",
+              "visible": false,
+              "unit": ""
+            },
+            {
+              "key": "resolution",
+              "label": "Resolution",
+              "visible": false,
+              "unit": ""
+            },
+            {
+              "key": "output_signal_type",
+              "label": "Output signal",
+              "visible": false,
+              "unit": ""
+            },
+            {
+              "key": "input_channel",
+              "label": "Input channel",
+              "visible": false,
+              "unit": ""
+            },
+            {
+              "key": "alarm_low",
+              "label": "Alarm low",
+              "visible": false,
+              "unit": ""
+            },
+            {
+              "key": "alarm_high",
+              "label": "Alarm high",
+              "visible": false,
+              "unit": ""
+            },
+            {
+              "key": "warning_low",
+              "label": "Warning low",
+              "visible": false,
+              "unit": ""
+            },
+            {
+              "key": "warning_high",
+              "label": "Warning high",
+              "visible": false,
+              "unit": ""
+            },
+            {
+              "key": "network_address",
+              "label": "Network address",
+              "visible": false,
+              "unit": ""
+            },
+            {
+              "key": "remarks",
+              "label": "Remarks",
+              "visible": false,
+              "unit": ""
+            },
+            {
+              "key": "value_actual",
+              "label": "Current value",
+              "visible": true,
+              "unit": "%"
+            },
+            {
+              "key": "value_filtered",
+              "label": "Filtered value",
+              "visible": false,
+              "unit": ""
+            },
+            {
+              "key": "raw_signal_value",
+              "label": "Raw signal",
+              "visible": false,
+              "unit": ""
+            },
+            {
+              "key": "scaled_value",
+              "label": "Scaled value",
+              "visible": false,
+              "unit": ""
+            },
+            {
+              "key": "status",
+              "label": "Status",
+              "visible": false,
+              "unit": ""
+            },
+            {
+              "key": "communication_status",
+              "label": "Comm. status",
+              "visible": false,
+              "unit": ""
+            }
+          ],
+          "panelX": -37.11096277573941,
+          "panelY": 50.374480102805165,
+          "componentName": "rh_room"
+        }
+      },
+      {
+        "id": "Symbols_WaterSystems_Piping_HWR_HWR-Vertical-Large-1781552002563-vls7z",
+        "nodeType": "svgNode",
+        "type": "Symbols_WaterSystems_Piping_HWR_HWR-Vertical-Large",
+        "title": "HWR_HWR-Vertical-Large-Heater-Supply-Coil",
+        "parentId": "group-1781552002563",
+        "x": 528.9543299760057,
+        "y": 278.8262338132124,
+        "width": 11,
+        "height": 95,
+        "zIndex": 0,
+        "props": {
+          "name": "HWR_HWR-Vertical-Large",
+          "tag": "HWR_HWR-Vertical-Large-Heater-Supply-Coil",
+          "type": "Symbols_WaterSystems_Piping_HWR_HWR-Vertical-Large",
+          "baseWidth": 11,
+          "baseHeight": 95,
+          "scale": 1,
+          "topic": null,
+          "hideLabel": true
+        }
+      },
+      {
+        "id": "Symbols_AirSystems_MISC_ERV-1781552002563-737vy",
+        "nodeType": "svgNode",
+        "type": "Symbols_AirSystems_MISC_ERV",
+        "title": "ERV",
+        "parentId": "group-1781552002563",
+        "x": 296.8009343877339,
+        "y": 155.74208063087315,
+        "width": 90,
+        "height": 89,
+        "zIndex": 0,
+        "props": {
+          "name": "ERV",
+          "tag": "ERV",
+          "type": "Symbols_AirSystems_MISC_ERV",
+          "baseWidth": 90,
+          "baseHeight": 89,
+          "scale": 1,
+          "svgUrl": "/svgs/Symbols/AirSystems/MISC/ERV.svg",
+          "category": "MISC",
+          "hideLabel": true,
+          "showPanel": false,
+          "panelAttributes": [
+            {
+              "key": "tag",
+              "label": "Tag",
+              "visible": true,
+              "unit": ""
+            }
+          ]
+        }
+      },
+      {
+        "id": "DAMPER_INLET-1781552002563-f88u0",
+        "nodeType": "svgNode",
+        "type": "DAMPER_INLET",
+        "title": "Damper-Lower-Parallel-with_Act",
+        "parentId": "group-1781552002563",
+        "x": 328.7890844502828,
+        "y": 236.51844469146602,
+        "width": 22,
+        "height": 45,
+        "zIndex": 0,
+        "props": {
+          "name": "Damper-Lower-Parallel-with_Act",
+          "tag": "Damper-Lower-Parallel-with_Act",
+          "type": "DAMPER_INLET",
+          "baseWidth": 44,
+          "baseHeight": 90,
+          "scale": 0.5,
+          "svgUrl": "/svgs/Symbols/AirSystems/Dampers/With_Actuator/Damper-Lower-Parallel-with_Act-0000.svg",
+          "category": "With_Actuator",
+          "hideLabel": true,
+          "actuation": "2POINT",
+          "failPos": "CLOSE",
+          "hasFbOpen": true,
+          "hasFbClosed": false,
+          "openTimeS": 20
+        }
+      },
+      {
+        "id": "DAMPER_INLET-1781552002563-y7y2i",
+        "nodeType": "svgNode",
+        "type": "DAMPER_INLET",
+        "title": "Damper-Upper-Parallel-with_Act",
+        "parentId": "group-1781552002563",
+        "x": 327.02066812157295,
+        "y": 127.57304235262717,
+        "width": 28,
+        "height": 45,
+        "zIndex": 0,
+        "props": {
+          "name": "Damper-Upper-Parallel-with_Act",
+          "tag": "Damper-Upper-Parallel-with_Act",
+          "type": "DAMPER_INLET",
+          "baseWidth": 56,
+          "baseHeight": 90,
+          "scale": 0.5,
+          "svgUrl": "/svgs/Symbols/AirSystems/Dampers/With_Actuator/Damper-Upper-Parallel-with_Act-0000.svg",
+          "category": "With_Actuator",
+          "hideLabel": true,
+          "actuation": "MODULATING",
+          "failPos": "CLOSE",
+          "hasFbOpen": true,
+          "hasFbClosed": false,
+          "openTimeS": 20,
+          "showPanel": true,
+          "panelAttributes": [
+            {
+              "key": "tag",
+              "label": "Tag",
+              "visible": false,
+              "unit": ""
+            },
+            {
+              "key": "actuation",
+              "label": "Actuation",
+              "visible": false,
+              "unit": ""
+            },
+            {
+              "key": "failPos",
+              "label": "Fail position",
+              "visible": false,
+              "unit": ""
+            },
+            {
+              "key": "hasFbOpen",
+              "label": "Feedback Open",
+              "visible": false,
+              "unit": ""
+            },
+            {
+              "key": "hasFbClosed",
+              "label": "Feedback Closed",
+              "visible": false,
+              "unit": ""
+            },
+            {
+              "key": "openTimeS",
+              "label": "Open time (s)",
+              "visible": false,
+              "unit": ""
+            }
+          ]
+        }
+      }
+    ],
+    "links": []
+  },
+  "devices": []
+}
