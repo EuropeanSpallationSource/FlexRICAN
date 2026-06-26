@@ -47,4 +47,4 @@ Each AHU folder contains the complete material for one program block:
 
 The files in this database are reference program blocks. Before use on real HVAC equipment, the selected program must be reviewed, connected to the correct I/O, tested, commissioned and tuned for the actual installation.
 
-For project background and milestone context, see `M9_Milestone_Report_V1.docx`.
+For project background and milestone context, see `M9_Milestone_Report_FINAL.docx`.
