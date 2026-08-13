@@ -18,7 +18,7 @@
     "Toola"
    ],
    "title": "FlexRICAN Toola Data Relationships",
-   "path": "urn:flexrican:toola:metadata:toola-data-relationships:v0.1",
+   "path": "https://raw.githubusercontent.com/EuropeanSpallationSource/FlexRICAN/main/WP4_Storage/Toola/metadata/toola_data_relationships.csv",
    "description": "Ontology-oriented relationship table describing the main entities and dependencies within the FlexRICAN Toola data architecture. Each row represents one relationship in the form subject-predicate-object. The relationship graph links source platforms, raw datasets, curated Toola input tables, assumptions, calculation steps and output indicators. The primary Ember EnergyMIX workbook is treated as the wider reference dataset. The curated carbon intensity table is treated as a Toola input dataset derived from Ember data and used to calculate country-level grid electricity emissions. The relationship graph is intended as a reproducibility and validation layer, not as a replacement for the actual source data files.",
    "languages": [
     "en-GB"
@@ -59,12 +59,12 @@
    "publicationDate": "2026-08-11",
    "context": {
     "title": "FlexRICAN Toola data provenance and relationship model",
-    "homepage": "ToDo: add FlexRICAN or Toola homepage",
-    "documentation": "ToDo: add Toola methodology, README or SharePoint documentation path",
-    "sourceCode": "ToDo: add GitHub repository or internal repository path",
+    "homepage": "https://github.com/EuropeanSpallationSource/FlexRICAN",
+    "documentation": "https://github.com/EuropeanSpallationSource/FlexRICAN/blob/main/WP4_Storage/Toola/metadata/toola_data_relationships_README.md",
+    "sourceCode": "https://github.com/EuropeanSpallationSource/FlexRICAN/tree/main/WP4_Storage/Toola/metadata",
     "publisher": "FlexRICAN project consortium",
     "publisherLogo": null,
-    "contact": "ToDo: add project contact e-mail",
+    "contact": "zdenek.fulka@eli-beams.eu",
     "fundingAgency": "European Union",
     "fundingAgencyLogo": null,
     "grantNo": "101131516"
@@ -149,7 +149,7 @@
      "path": "https://creativecommons.org/licenses/by/4.0/",
      "instruction": "Attribute Ember as the original data source and document FlexRICAN-specific processing separately.",
      "attribution": "Original data source: Ember Electricity Data Explorer. Processing and metadata: FlexRICAN project consortium.",
-     "copyrightStatement": "ToDo: add project-specific copyright or reuse statement"
+     "copyrightStatement": "Original data source: Ember. Processing and metadata: FlexRICAN project consortium. Reuse should attribute Ember and cite the FlexRICAN repository metadata record."
     }
    ],
    "contributors": [
