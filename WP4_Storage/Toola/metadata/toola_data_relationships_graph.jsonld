@@ -1,0 +1,750 @@
+{
+  "@context": {
+    "flex": "urn:flexrican:toola:",
+    "prov": "http://www.w3.org/ns/prov#",
+    "dct": "http://purl.org/dc/terms/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "label": "rdfs:label",
+    "type": "@type",
+    "relationship": "flex:relationship",
+    "methodologicalNote": "dct:description",
+    "sourceReference": "dct:source"
+  },
+  "@id": "urn:flexrican:toola:data-graph:v0.1:2026-08-11",
+  "@type": "flex:ToolaDataGraph",
+  "label": "FlexRICAN Toola Data Graph",
+  "nodes": [
+    {
+      "@id": "urn:flexrican:toola:node:ember_electricity_data_explorer",
+      "@type": "flex:source_platform",
+      "label": "Ember Electricity Data Explorer"
+    },
+    {
+      "@id": "urn:flexrican:toola:node:ember_energy_mix_long_format",
+      "@type": "flex:raw_dataset",
+      "label": "Ember Energy Mix Long-Format Dataset"
+    },
+    {
+      "@id": "urn:flexrican:toola:node:ember_carbon_intensity_raw_exports",
+      "@type": "flex:raw_dataset",
+      "label": "Ember Carbon Intensity Raw Exports"
+    },
+    {
+      "@id": "urn:flexrican:toola:node:cc_by_4_0",
+      "@type": "flex:license",
+      "label": "Creative Commons Attribution 4.0 International"
+    },
+    {
+      "@id": "urn:flexrican:toola:node:ember_energy_mix_workbook",
+      "@type": "flex:source_workbook",
+      "label": "01_EnergyMIX_of_EU_Countries_EMBER.xlsx"
+    },
+    {
+      "@id": "urn:flexrican:toola:node:yearly_full_release_long_format",
+      "@type": "flex:data_sheet",
+      "label": "yearly_full_release_long_format"
+    },
+    {
+      "@id": "urn:flexrican:toola:node:area",
+      "@type": "flex:field",
+      "label": "Area"
+    },
+    {
+      "@id": "urn:flexrican:toola:node:iso_3_code",
+      "@type": "flex:field",
+      "label": "ISO 3 code"
+    },
+    {
+      "@id": "urn:flexrican:toola:node:year",
+      "@type": "flex:field",
+      "label": "Year"
+    },
+    {
+      "@id": "urn:flexrican:toola:node:category",
+      "@type": "flex:field",
+      "label": "Category"
+    },
+    {
+      "@id": "urn:flexrican:toola:node:variable",
+      "@type": "flex:field",
+      "label": "Variable"
+    },
+    {
+      "@id": "urn:flexrican:toola:node:unit",
+      "@type": "flex:field",
+      "label": "Unit"
+    },
+    {
+      "@id": "urn:flexrican:toola:node:value",
+      "@type": "flex:field",
+      "label": "Value"
+    },
+    {
+      "@id": "urn:flexrican:toola:node:electricity_generation_by_source",
+      "@type": "flex:energy_variable",
+      "label": "Electricity Generation by Source"
+    },
+    {
+      "@id": "urn:flexrican:toola:node:installed_capacity_by_source",
+      "@type": "flex:energy_variable",
+      "label": "Installed Capacity by Source"
+    },
+    {
+      "@id": "urn:flexrican:toola:node:electricity_demand",
+      "@type": "flex:energy_variable",
+      "label": "Electricity Demand"
+    },
+    {
+      "@id": "urn:flexrican:toola:node:electricity_imports",
+      "@type": "flex:energy_variable",
+      "label": "Electricity Imports"
+    },
+    {
+      "@id": "urn:flexrican:toola:node:power_sector_emissions",
+      "@type": "flex:emission_variable",
+      "label": "Power-Sector Emissions"
+    },
+    {
+      "@id": "urn:flexrican:toola:node:co2_intensity",
+      "@type": "flex:emission_indicator",
+      "label": "CO2 Intensity"
+    },
+    {
+      "@id": "urn:flexrican:toola:node:gco2_per_kwh",
+      "@type": "flex:unit",
+      "label": "gCO2/kWh"
+    },
+    {
+      "@id": "urn:flexrican:toola:node:carbon_intensity_workbook",
+      "@type": "flex:curated_workbook",
+      "label": "02_Carbon_intensities_of_EU_Countries_EMBER.xlsx"
+    },
+    {
+      "@id": "urn:flexrican:toola:node:carbon_final",
+      "@type": "flex:data_sheet",
+      "label": "Carbon_Final"
+    },
+    {
+      "@id": "urn:flexrican:toola:node:entity",
+      "@type": "flex:field",
+      "label": "entity"
+    },
+    {
+      "@id": "urn:flexrican:toola:node:carbon_intensity_2024",
+      "@type": "flex:field",
+      "label": "2024"
+    },
+    {
+      "@id": "urn:flexrican:toola:node:carbon_intensity_2025",
+      "@type": "flex:field",
+      "label": "2025"
+    },
+    {
+      "@id": "urn:flexrican:toola:node:flexrican_carbon_intensity_summary",
+      "@type": "flex:curated_dataset",
+      "label": "FlexRICAN Carbon Intensity Summary"
+    },
+    {
+      "@id": "urn:flexrican:toola:node:toola_calculation_run",
+      "@type": "flex:model_process",
+      "label": "Toola Calculation Run"
+    },
+    {
+      "@id": "urn:flexrican:toola:node:toola_scenario_configuration",
+      "@type": "flex:configuration",
+      "label": "Toola Scenario Configuration"
+    },
+    {
+      "@id": "urn:flexrican:toola:node:country_or_economy",
+      "@type": "flex:scenario_dimension",
+      "label": "Country or Economy"
+    },
+    {
+      "@id": "urn:flexrican:toola:node:analysis_year",
+      "@type": "flex:scenario_dimension",
+      "label": "Analysis Year"
+    },
+    {
+      "@id": "urn:flexrican:toola:node:facility_type",
+      "@type": "flex:scenario_dimension",
+      "label": "Facility Type"
+    },
+    {
+      "@id": "urn:flexrican:toola:node:facility_electricity_demand_profile",
+      "@type": "flex:input_dataset",
+      "label": "Facility Electricity Demand Profile"
+    },
+    {
+      "@id": "urn:flexrican:toola:node:country_carbon_intensity",
+      "@type": "flex:parameter",
+      "label": "Country Carbon Intensity"
+    },
+    {
+      "@id": "urn:flexrican:toola:node:pv_generation_potential",
+      "@type": "flex:input_dataset",
+      "label": "PV Generation Potential"
+    },
+    {
+      "@id": "urn:flexrican:toola:node:wind_generation_potential",
+      "@type": "flex:input_dataset",
+      "label": "Wind Generation Potential"
+    },
+    {
+      "@id": "urn:flexrican:toola:node:climate_projection_scenarios",
+      "@type": "flex:input_dataset",
+      "label": "Climate Projection Scenarios"
+    },
+    {
+      "@id": "urn:flexrican:toola:node:future_energy_chain_assessment",
+      "@type": "flex:model_context",
+      "label": "Future Energy-Chain Assessment"
+    },
+    {
+      "@id": "urn:flexrican:toola:node:technology_parameters",
+      "@type": "flex:parameter_set",
+      "label": "Technology Parameters"
+    },
+    {
+      "@id": "urn:flexrican:toola:node:bess_roundtrip_efficiency",
+      "@type": "flex:parameter",
+      "label": "BESS Round-Trip Efficiency"
+    },
+    {
+      "@id": "urn:flexrican:toola:node:grid_import",
+      "@type": "flex:calculation_step",
+      "label": "Grid Import"
+    },
+    {
+      "@id": "urn:flexrican:toola:node:facility_demand_minus_local_generation_and_storage",
+      "@type": "flex:calculation_dependency",
+      "label": "Facility Demand Minus Local Generation and Storage"
+    },
+    {
+      "@id": "urn:flexrican:toola:node:annual_grid_emissions",
+      "@type": "flex:output_indicator",
+      "label": "Annual Grid Electricity Emissions"
+    },
+    {
+      "@id": "urn:flexrican:toola:node:grid_import_and_country_carbon_intensity",
+      "@type": "flex:calculation_dependency",
+      "label": "Grid Import and Country Carbon Intensity"
+    },
+    {
+      "@id": "urn:flexrican:toola:node:renewable_energy_contribution",
+      "@type": "flex:output_indicator",
+      "label": "Renewable Energy Contribution"
+    },
+    {
+      "@id": "urn:flexrican:toola:node:pv_generation_and_wind_generation",
+      "@type": "flex:calculation_dependency",
+      "label": "PV Generation and Wind Generation"
+    },
+    {
+      "@id": "urn:flexrican:toola:node:bess_energy_capacity",
+      "@type": "flex:output_indicator",
+      "label": "BESS Energy Capacity"
+    },
+    {
+      "@id": "urn:flexrican:toola:node:demand_profile_generation_profile_and_resilience_target",
+      "@type": "flex:calculation_dependency",
+      "label": "Demand Profile, Generation Profile and Resilience Target"
+    },
+    {
+      "@id": "urn:flexrican:toola:node:bess_power_capacity",
+      "@type": "flex:output_indicator",
+      "label": "BESS Power Capacity"
+    },
+    {
+      "@id": "urn:flexrican:toola:node:peak_power_and_operational_constraints",
+      "@type": "flex:calculation_dependency",
+      "label": "Peak Power and Operational Constraints"
+    },
+    {
+      "@id": "urn:flexrican:toola:node:grid_dependency",
+      "@type": "flex:output_indicator",
+      "label": "Grid Dependency"
+    },
+    {
+      "@id": "urn:flexrican:toola:node:grid_import_and_total_demand",
+      "@type": "flex:calculation_dependency",
+      "label": "Grid Import and Total Demand"
+    },
+    {
+      "@id": "urn:flexrican:toola:node:scenario_comparison_result",
+      "@type": "flex:output_indicator",
+      "label": "Scenario Comparison Result"
+    },
+    {
+      "@id": "urn:flexrican:toola:node:scenario_configuration_and_input_datasets",
+      "@type": "flex:calculation_dependency",
+      "label": "Scenario Configuration and Input Datasets"
+    },
+    {
+      "@id": "urn:flexrican:toola:node:toola_data_relationships",
+      "@type": "flex:relationship_table",
+      "label": "Toola Data Relationships"
+    },
+    {
+      "@id": "urn:flexrican:toola:node:flexrican_toola_data_graph_oemetadata",
+      "@type": "flex:metadata_record",
+      "label": "FlexRICAN Toola Data Graph OEMetadata"
+    },
+    {
+      "@id": "urn:flexrican:toola:node:toola_data_graph_jsonld",
+      "@type": "flex:graph_serialisation",
+      "label": "Toola Data Graph JSON-LD"
+    }
+  ],
+  "relationships": [
+    {
+      "@id": "urn:flexrican:toola:relationship:001",
+      "@type": "flex:DataRelationship",
+      "subject": "urn:flexrican:toola:node:ember_electricity_data_explorer",
+      "predicate": "provides",
+      "object": "urn:flexrican:toola:node:ember_energy_mix_long_format",
+      "methodologicalNote": "Primary source platform for country-year electricity generation, capacity, demand, imports, power-sector emissions and CO2 intensity data used as wider context for Toola input data.",
+      "sourceReference": "https://ember-energy.org/data/electricity-data-explorer/"
+    },
+    {
+      "@id": "urn:flexrican:toola:relationship:002",
+      "@type": "flex:DataRelationship",
+      "subject": "urn:flexrican:toola:node:ember_electricity_data_explorer",
+      "predicate": "provides",
+      "object": "urn:flexrican:toola:node:ember_carbon_intensity_raw_exports",
+      "methodologicalNote": "Country-level carbon intensity exports were downloaded through the Data Explorer using Carbon Emission Intensity, Absolute Value, All electricity sources and Countries or Economies.",
+      "sourceReference": "https://ember-energy.org/data/electricity-data-explorer/"
+    },
+    {
+      "@id": "urn:flexrican:toola:relationship:003",
+      "@type": "flex:DataRelationship",
+      "subject": "urn:flexrican:toola:node:ember_electricity_data_explorer",
+      "predicate": "uses_license",
+      "object": "urn:flexrican:toola:node:cc_by_4_0",
+      "methodologicalNote": "Original Ember data must be attributed when reused, shared or adapted.",
+      "sourceReference": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "@id": "urn:flexrican:toola:relationship:004",
+      "@type": "flex:DataRelationship",
+      "subject": "urn:flexrican:toola:node:ember_energy_mix_workbook",
+      "predicate": "contains_sheet",
+      "object": "urn:flexrican:toola:node:yearly_full_release_long_format",
+      "methodologicalNote": "Primary long-format working sheet with country-year records used as wider reference data for Toola.",
+      "sourceReference": "01_EnergyMIX_of_EU_Countries_EMBER.xlsx#yearly_full_release_long_format"
+    },
+    {
+      "@id": "urn:flexrican:toola:relationship:005",
+      "@type": "flex:DataRelationship",
+      "subject": "urn:flexrican:toola:node:yearly_full_release_long_format",
+      "predicate": "contains_field",
+      "object": "urn:flexrican:toola:node:area",
+      "methodologicalNote": "Country or economy name used for country-level mapping and scenario selection.",
+      "sourceReference": "01_EnergyMIX_of_EU_Countries_EMBER.xlsx#yearly_full_release_long_format"
+    },
+    {
+      "@id": "urn:flexrican:toola:relationship:006",
+      "@type": "flex:DataRelationship",
+      "subject": "urn:flexrican:toola:node:yearly_full_release_long_format",
+      "predicate": "contains_field",
+      "object": "urn:flexrican:toola:node:iso_3_code",
+      "methodologicalNote": "Country code used to stabilise matching between input tables and Toola scenario configuration.",
+      "sourceReference": "01_EnergyMIX_of_EU_Countries_EMBER.xlsx#yearly_full_release_long_format"
+    },
+    {
+      "@id": "urn:flexrican:toola:relationship:007",
+      "@type": "flex:DataRelationship",
+      "subject": "urn:flexrican:toola:node:yearly_full_release_long_format",
+      "predicate": "contains_field",
+      "object": "urn:flexrican:toola:node:year",
+      "methodologicalNote": "Calendar year dimension used for temporal comparison and year-specific carbon-intensity values.",
+      "sourceReference": "01_EnergyMIX_of_EU_Countries_EMBER.xlsx#yearly_full_release_long_format"
+    },
+    {
+      "@id": "urn:flexrican:toola:relationship:008",
+      "@type": "flex:DataRelationship",
+      "subject": "urn:flexrican:toola:node:yearly_full_release_long_format",
+      "predicate": "contains_field",
+      "object": "urn:flexrican:toola:node:category",
+      "methodologicalNote": "High-level grouping such as electricity generation, capacity, demand, imports or power-sector emissions.",
+      "sourceReference": "01_EnergyMIX_of_EU_Countries_EMBER.xlsx#yearly_full_release_long_format"
+    },
+    {
+      "@id": "urn:flexrican:toola:relationship:009",
+      "@type": "flex:DataRelationship",
+      "subject": "urn:flexrican:toola:node:yearly_full_release_long_format",
+      "predicate": "contains_field",
+      "object": "urn:flexrican:toola:node:variable",
+      "methodologicalNote": "Specific energy carrier, source, indicator or measured variable used to contextualise the country energy mix.",
+      "sourceReference": "01_EnergyMIX_of_EU_Countries_EMBER.xlsx#yearly_full_release_long_format"
+    },
+    {
+      "@id": "urn:flexrican:toola:relationship:010",
+      "@type": "flex:DataRelationship",
+      "subject": "urn:flexrican:toola:node:yearly_full_release_long_format",
+      "predicate": "contains_field",
+      "object": "urn:flexrican:toola:node:unit",
+      "methodologicalNote": "Measurement unit for each observation, such as TWh, GW, %, mtCO2 or gCO2/kWh.",
+      "sourceReference": "01_EnergyMIX_of_EU_Countries_EMBER.xlsx#yearly_full_release_long_format"
+    },
+    {
+      "@id": "urn:flexrican:toola:relationship:011",
+      "@type": "flex:DataRelationship",
+      "subject": "urn:flexrican:toola:node:yearly_full_release_long_format",
+      "predicate": "contains_field",
+      "object": "urn:flexrican:toola:node:value",
+      "methodologicalNote": "Numerical observation value for the selected country, year, category, variable and unit.",
+      "sourceReference": "01_EnergyMIX_of_EU_Countries_EMBER.xlsx#yearly_full_release_long_format"
+    },
+    {
+      "@id": "urn:flexrican:toola:relationship:012",
+      "@type": "flex:DataRelationship",
+      "subject": "urn:flexrican:toola:node:ember_energy_mix_long_format",
+      "predicate": "contains_variable",
+      "object": "urn:flexrican:toola:node:electricity_generation_by_source",
+      "methodologicalNote": "The generation mix explains why individual countries have different carbon intensity levels.",
+      "sourceReference": "01_EnergyMIX_of_EU_Countries_EMBER.xlsx"
+    },
+    {
+      "@id": "urn:flexrican:toola:relationship:013",
+      "@type": "flex:DataRelationship",
+      "subject": "urn:flexrican:toola:node:ember_energy_mix_long_format",
+      "predicate": "contains_variable",
+      "object": "urn:flexrican:toola:node:installed_capacity_by_source",
+      "methodologicalNote": "Capacity data provide technology context for country-level electricity-system comparison.",
+      "sourceReference": "01_EnergyMIX_of_EU_Countries_EMBER.xlsx"
+    },
+    {
+      "@id": "urn:flexrican:toola:relationship:014",
+      "@type": "flex:DataRelationship",
+      "subject": "urn:flexrican:toola:node:ember_energy_mix_long_format",
+      "predicate": "contains_variable",
+      "object": "urn:flexrican:toola:node:electricity_demand",
+      "methodologicalNote": "Demand data can contextualise electricity-system scale and country-level comparison.",
+      "sourceReference": "01_EnergyMIX_of_EU_Countries_EMBER.xlsx"
+    },
+    {
+      "@id": "urn:flexrican:toola:relationship:015",
+      "@type": "flex:DataRelationship",
+      "subject": "urn:flexrican:toola:node:ember_energy_mix_long_format",
+      "predicate": "contains_variable",
+      "object": "urn:flexrican:toola:node:electricity_imports",
+      "methodologicalNote": "Import data may be used to interpret national electricity-system dependency and carbon-intensity context.",
+      "sourceReference": "01_EnergyMIX_of_EU_Countries_EMBER.xlsx"
+    },
+    {
+      "@id": "urn:flexrican:toola:relationship:016",
+      "@type": "flex:DataRelationship",
+      "subject": "urn:flexrican:toola:node:ember_energy_mix_long_format",
+      "predicate": "contains_variable",
+      "object": "urn:flexrican:toola:node:power_sector_emissions",
+      "methodologicalNote": "Power-sector emissions data provide emissions context for electricity-system comparisons.",
+      "sourceReference": "01_EnergyMIX_of_EU_Countries_EMBER.xlsx"
+    },
+    {
+      "@id": "urn:flexrican:toola:relationship:017",
+      "@type": "flex:DataRelationship",
+      "subject": "urn:flexrican:toola:node:ember_energy_mix_long_format",
+      "predicate": "contains_variable",
+      "object": "urn:flexrican:toola:node:co2_intensity",
+      "methodologicalNote": "CO2 intensity is the country-year emission indicator used for the carbon intensity summary table.",
+      "sourceReference": "01_EnergyMIX_of_EU_Countries_EMBER.xlsx"
+    },
+    {
+      "@id": "urn:flexrican:toola:relationship:018",
+      "@type": "flex:DataRelationship",
+      "subject": "urn:flexrican:toola:node:co2_intensity",
+      "predicate": "has_unit",
+      "object": "urn:flexrican:toola:node:gco2_per_kwh",
+      "methodologicalNote": "Unit used for electricity carbon-intensity values in the Toola carbon intensity summary.",
+      "sourceReference": "02_Carbon_intensities_of_EU_Countries_EMBER.xlsx#Carbon_Final"
+    },
+    {
+      "@id": "urn:flexrican:toola:relationship:019",
+      "@type": "flex:DataRelationship",
+      "subject": "urn:flexrican:toola:node:carbon_intensity_workbook",
+      "predicate": "contains_sheet",
+      "object": "urn:flexrican:toola:node:carbon_final",
+      "methodologicalNote": "Curated country-level Toola input sheet containing 2024 and 2025 carbon-intensity values.",
+      "sourceReference": "02_Carbon_intensities_of_EU_Countries_EMBER.xlsx#Carbon_Final"
+    },
+    {
+      "@id": "urn:flexrican:toola:relationship:020",
+      "@type": "flex:DataRelationship",
+      "subject": "urn:flexrican:toola:node:carbon_final",
+      "predicate": "contains_field",
+      "object": "urn:flexrican:toola:node:entity",
+      "methodologicalNote": "Country or economy label in the curated carbon-intensity summary table.",
+      "sourceReference": "02_Carbon_intensities_of_EU_Countries_EMBER.xlsx#Carbon_Final"
+    },
+    {
+      "@id": "urn:flexrican:toola:relationship:021",
+      "@type": "flex:DataRelationship",
+      "subject": "urn:flexrican:toola:node:carbon_final",
+      "predicate": "contains_field",
+      "object": "urn:flexrican:toola:node:carbon_intensity_2024",
+      "methodologicalNote": "Country-level electricity carbon intensity for calendar year 2024.",
+      "sourceReference": "02_Carbon_intensities_of_EU_Countries_EMBER.xlsx#Carbon_Final"
+    },
+    {
+      "@id": "urn:flexrican:toola:relationship:022",
+      "@type": "flex:DataRelationship",
+      "subject": "urn:flexrican:toola:node:carbon_final",
+      "predicate": "contains_field",
+      "object": "urn:flexrican:toola:node:carbon_intensity_2025",
+      "methodologicalNote": "Country-level electricity carbon intensity for calendar year 2025.",
+      "sourceReference": "02_Carbon_intensities_of_EU_Countries_EMBER.xlsx#Carbon_Final"
+    },
+    {
+      "@id": "urn:flexrican:toola:relationship:023",
+      "@type": "flex:DataRelationship",
+      "subject": "urn:flexrican:toola:node:flexrican_carbon_intensity_summary",
+      "predicate": "is_derived_from",
+      "object": "urn:flexrican:toola:node:ember_carbon_intensity_raw_exports",
+      "methodologicalNote": "Manual export sequence was repeated for country groups, imported into Excel Power Query, appended, filtered and pivoted to separate 2024 and 2025 columns.",
+      "sourceReference": "02_Carbon_intensities_of_EU_Countries_EMBER.xlsx"
+    },
+    {
+      "@id": "urn:flexrican:toola:relationship:024",
+      "@type": "flex:DataRelationship",
+      "subject": "urn:flexrican:toola:node:flexrican_carbon_intensity_summary",
+      "predicate": "is_contextualised_by",
+      "object": "urn:flexrican:toola:node:ember_energy_mix_long_format",
+      "methodologicalNote": "EnergyMIX provides wider context for interpreting country-level carbon-intensity values through generation mix, capacity, demand, imports and power-sector emissions.",
+      "sourceReference": "01_EnergyMIX_of_EU_Countries_EMBER.xlsx"
+    },
+    {
+      "@id": "urn:flexrican:toola:relationship:025",
+      "@type": "flex:DataRelationship",
+      "subject": "urn:flexrican:toola:node:flexrican_carbon_intensity_summary",
+      "predicate": "provides_input_to",
+      "object": "urn:flexrican:toola:node:toola_calculation_run",
+      "methodologicalNote": "Country-year carbon-intensity values are selected according to Toola scenario configuration and used as input parameters.",
+      "sourceReference": "FlexRICAN Toola methodology"
+    },
+    {
+      "@id": "urn:flexrican:toola:relationship:026",
+      "@type": "flex:DataRelationship",
+      "subject": "urn:flexrican:toola:node:toola_scenario_configuration",
+      "predicate": "selects",
+      "object": "urn:flexrican:toola:node:country_or_economy",
+      "methodologicalNote": "The user-selected location determines the country-level electricity carbon intensity and energy-system context used in Toola.",
+      "sourceReference": "FlexRICAN Toola methodology"
+    },
+    {
+      "@id": "urn:flexrican:toola:relationship:027",
+      "@type": "flex:DataRelationship",
+      "subject": "urn:flexrican:toola:node:toola_scenario_configuration",
+      "predicate": "selects",
+      "object": "urn:flexrican:toola:node:analysis_year",
+      "methodologicalNote": "The selected year determines which annual carbon-intensity value is used.",
+      "sourceReference": "FlexRICAN Toola methodology"
+    },
+    {
+      "@id": "urn:flexrican:toola:relationship:028",
+      "@type": "flex:DataRelationship",
+      "subject": "urn:flexrican:toola:node:toola_scenario_configuration",
+      "predicate": "selects",
+      "object": "urn:flexrican:toola:node:facility_type",
+      "methodologicalNote": "Facility type frames demand profile, operational assumptions and resilience requirements.",
+      "sourceReference": "FlexRICAN Toola methodology"
+    },
+    {
+      "@id": "urn:flexrican:toola:relationship:029",
+      "@type": "flex:DataRelationship",
+      "subject": "urn:flexrican:toola:node:facility_electricity_demand_profile",
+      "predicate": "provides_input_to",
+      "object": "urn:flexrican:toola:node:toola_calculation_run",
+      "methodologicalNote": "Facility electricity demand profile is the baseline load against which renewable generation, grid import and storage needs are assessed.",
+      "sourceReference": "FlexRICAN Toola methodology"
+    },
+    {
+      "@id": "urn:flexrican:toola:relationship:030",
+      "@type": "flex:DataRelationship",
+      "subject": "urn:flexrican:toola:node:facility_electricity_demand_profile",
+      "predicate": "is_multiplied_by",
+      "object": "urn:flexrican:toola:node:country_carbon_intensity",
+      "methodologicalNote": "Grid electricity demand or import is multiplied by the selected country-year carbon intensity to estimate grid electricity emissions.",
+      "sourceReference": "FlexRICAN Toola calculation logic"
+    },
+    {
+      "@id": "urn:flexrican:toola:relationship:031",
+      "@type": "flex:DataRelationship",
+      "subject": "urn:flexrican:toola:node:country_carbon_intensity",
+      "predicate": "is_selected_from",
+      "object": "urn:flexrican:toola:node:flexrican_carbon_intensity_summary",
+      "methodologicalNote": "The country and analysis year determine which value is selected from the curated summary table.",
+      "sourceReference": "02_Carbon_intensities_of_EU_Countries_EMBER.xlsx#Carbon_Final"
+    },
+    {
+      "@id": "urn:flexrican:toola:relationship:032",
+      "@type": "flex:DataRelationship",
+      "subject": "urn:flexrican:toola:node:pv_generation_potential",
+      "predicate": "provides_input_to",
+      "object": "urn:flexrican:toola:node:toola_calculation_run",
+      "methodologicalNote": "Location-dependent PV generation potential is used to estimate possible local renewable electricity contribution.",
+      "sourceReference": "FlexRICAN Toola methodology"
+    },
+    {
+      "@id": "urn:flexrican:toola:relationship:033",
+      "@type": "flex:DataRelationship",
+      "subject": "urn:flexrican:toola:node:wind_generation_potential",
+      "predicate": "provides_input_to",
+      "object": "urn:flexrican:toola:node:toola_calculation_run",
+      "methodologicalNote": "Location-dependent wind generation potential is used to estimate possible local renewable electricity contribution where wind scenarios are included.",
+      "sourceReference": "FlexRICAN Toola methodology"
+    },
+    {
+      "@id": "urn:flexrican:toola:relationship:034",
+      "@type": "flex:DataRelationship",
+      "subject": "urn:flexrican:toola:node:climate_projection_scenarios",
+      "predicate": "defines_context_for",
+      "object": "urn:flexrican:toola:node:future_energy_chain_assessment",
+      "methodologicalNote": "Climate projections frame future weather-dependent renewable generation and possibly future HVAC/cooling-related demand assumptions.",
+      "sourceReference": "FlexRICAN Toola methodology"
+    },
+    {
+      "@id": "urn:flexrican:toola:relationship:035",
+      "@type": "flex:DataRelationship",
+      "subject": "urn:flexrican:toola:node:technology_parameters",
+      "predicate": "provides_input_to",
+      "object": "urn:flexrican:toola:node:toola_calculation_run",
+      "methodologicalNote": "Technology parameters include PV, wind, BESS, grid, CHP, diesel or other energy-chain assumptions used in scenario calculations.",
+      "sourceReference": "FlexRICAN Toola methodology"
+    },
+    {
+      "@id": "urn:flexrican:toola:relationship:036",
+      "@type": "flex:DataRelationship",
+      "subject": "urn:flexrican:toola:node:bess_roundtrip_efficiency",
+      "predicate": "is_part_of",
+      "object": "urn:flexrican:toola:node:technology_parameters",
+      "methodologicalNote": "Battery efficiency affects usable stored energy, renewable self-consumption and storage sizing.",
+      "sourceReference": "FlexRICAN Toola methodology"
+    },
+    {
+      "@id": "urn:flexrican:toola:relationship:037",
+      "@type": "flex:DataRelationship",
+      "subject": "urn:flexrican:toola:node:grid_import",
+      "predicate": "is_computed_from",
+      "object": "urn:flexrican:toola:node:facility_demand_minus_local_generation_and_storage",
+      "methodologicalNote": "Grid import depends on the load profile, local renewable generation profile and storage operation assumptions.",
+      "sourceReference": "FlexRICAN Toola calculation logic"
+    },
+    {
+      "@id": "urn:flexrican:toola:relationship:038",
+      "@type": "flex:DataRelationship",
+      "subject": "urn:flexrican:toola:node:annual_grid_emissions",
+      "predicate": "is_computed_from",
+      "object": "urn:flexrican:toola:node:grid_import_and_country_carbon_intensity",
+      "methodologicalNote": "Annual grid emissions are computed by combining electricity imported from the grid with the selected country-year carbon intensity.",
+      "sourceReference": "FlexRICAN Toola calculation logic"
+    },
+    {
+      "@id": "urn:flexrican:toola:relationship:039",
+      "@type": "flex:DataRelationship",
+      "subject": "urn:flexrican:toola:node:renewable_energy_contribution",
+      "predicate": "is_computed_from",
+      "object": "urn:flexrican:toola:node:pv_generation_and_wind_generation",
+      "methodologicalNote": "Renewable contribution is derived from local PV and wind generation estimates relative to the facility demand.",
+      "sourceReference": "FlexRICAN Toola calculation logic"
+    },
+    {
+      "@id": "urn:flexrican:toola:relationship:040",
+      "@type": "flex:DataRelationship",
+      "subject": "urn:flexrican:toola:node:bess_energy_capacity",
+      "predicate": "is_computed_from",
+      "object": "urn:flexrican:toola:node:demand_profile_generation_profile_and_resilience_target",
+      "methodologicalNote": "Battery energy capacity is informed by demand profile, local generation profile and resilience or operational continuity requirements.",
+      "sourceReference": "FlexRICAN Toola calculation logic"
+    },
+    {
+      "@id": "urn:flexrican:toola:relationship:041",
+      "@type": "flex:DataRelationship",
+      "subject": "urn:flexrican:toola:node:bess_power_capacity",
+      "predicate": "is_computed_from",
+      "object": "urn:flexrican:toola:node:peak_power_and_operational_constraints",
+      "methodologicalNote": "Battery power capacity is informed by load peaks, ramp requirements and selected operational constraints.",
+      "sourceReference": "FlexRICAN Toola calculation logic"
+    },
+    {
+      "@id": "urn:flexrican:toola:relationship:042",
+      "@type": "flex:DataRelationship",
+      "subject": "urn:flexrican:toola:node:grid_dependency",
+      "predicate": "is_computed_from",
+      "object": "urn:flexrican:toola:node:grid_import_and_total_demand",
+      "methodologicalNote": "Grid dependency expresses the relationship between imported grid electricity and total electricity demand.",
+      "sourceReference": "FlexRICAN Toola calculation logic"
+    },
+    {
+      "@id": "urn:flexrican:toola:relationship:043",
+      "@type": "flex:DataRelationship",
+      "subject": "urn:flexrican:toola:node:scenario_comparison_result",
+      "predicate": "is_computed_from",
+      "object": "urn:flexrican:toola:node:scenario_configuration_and_input_datasets",
+      "methodologicalNote": "Scenario comparison results are computed from country, year, facility profile, technology assumptions and selected renewable/resource datasets.",
+      "sourceReference": "FlexRICAN Toola methodology"
+    },
+    {
+      "@id": "urn:flexrican:toola:relationship:044",
+      "@type": "flex:DataRelationship",
+      "subject": "urn:flexrican:toola:node:toola_calculation_run",
+      "predicate": "produces",
+      "object": "urn:flexrican:toola:node:annual_grid_emissions",
+      "methodologicalNote": "Toola produces grid emissions as a scenario output indicator.",
+      "sourceReference": "FlexRICAN Toola methodology"
+    },
+    {
+      "@id": "urn:flexrican:toola:relationship:045",
+      "@type": "flex:DataRelationship",
+      "subject": "urn:flexrican:toola:node:toola_calculation_run",
+      "predicate": "produces",
+      "object": "urn:flexrican:toola:node:renewable_energy_contribution",
+      "methodologicalNote": "Toola produces renewable contribution as a scenario output indicator.",
+      "sourceReference": "FlexRICAN Toola methodology"
+    },
+    {
+      "@id": "urn:flexrican:toola:relationship:046",
+      "@type": "flex:DataRelationship",
+      "subject": "urn:flexrican:toola:node:toola_calculation_run",
+      "predicate": "produces",
+      "object": "urn:flexrican:toola:node:bess_energy_capacity",
+      "methodologicalNote": "Toola produces BESS energy capacity or sizing guidance as a scenario output.",
+      "sourceReference": "FlexRICAN Toola methodology"
+    },
+    {
+      "@id": "urn:flexrican:toola:relationship:047",
+      "@type": "flex:DataRelationship",
+      "subject": "urn:flexrican:toola:node:toola_calculation_run",
+      "predicate": "produces",
+      "object": "urn:flexrican:toola:node:bess_power_capacity",
+      "methodologicalNote": "Toola produces BESS power capacity or sizing guidance as a scenario output.",
+      "sourceReference": "FlexRICAN Toola methodology"
+    },
+    {
+      "@id": "urn:flexrican:toola:relationship:048",
+      "@type": "flex:DataRelationship",
+      "subject": "urn:flexrican:toola:node:toola_calculation_run",
+      "predicate": "produces",
+      "object": "urn:flexrican:toola:node:scenario_comparison_result",
+      "methodologicalNote": "Toola produces comparative outputs for selected country/year/scenario combinations.",
+      "sourceReference": "FlexRICAN Toola methodology"
+    },
+    {
+      "@id": "urn:flexrican:toola:relationship:049",
+      "@type": "flex:DataRelationship",
+      "subject": "urn:flexrican:toola:node:toola_data_relationships",
+      "predicate": "is_described_by",
+      "object": "urn:flexrican:toola:node:flexrican_toola_data_graph_oemetadata",
+      "methodologicalNote": "The relationship table is documented by the OEMetadata record created in the Open Energy Platform OEMetaBuilder.",
+      "sourceReference": "oemetadata.metadata (1).json"
+    },
+    {
+      "@id": "urn:flexrican:toola:relationship:050",
+      "@type": "flex:DataRelationship",
+      "subject": "urn:flexrican:toola:node:toola_data_relationships",
+      "predicate": "can_be_serialised_as",
+      "object": "urn:flexrican:toola:node:toola_data_graph_jsonld",
+      "methodologicalNote": "The subject-predicate-object relationship table can be converted into JSON-LD for graph visualisation or semantic web workflows.",
+      "sourceReference": "toola_data_relationships.csv"
+    }
+  ]
+}

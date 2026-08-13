@@ -1,0 +1,389 @@
+{
+ "@context": "https://raw.githubusercontent.com/OpenEnergyPlatform/oemetadata/production/oemetadata/latest/context.json",
+ "name": "flexrican_toola_data_graph",
+ "title": "FlexRICAN Toola Data Graph and Input Dataset Metadata",
+ "description": "This OEMetadata record describes the data architecture, input datasets, processing steps, assumptions and output indicators used by FlexRICAN Toola. It is structured as a lightweight ontology-oriented metadata record: Toola data entities are represented as nodes and their methodological relationships are represented as subject-predicate-object relationships. The record documents the provenance of input datasets, including Ember EnergyMIX data and a curated country-level carbon intensity summary table, and explains how these data are used in Toola calculations such as grid electricity emissions, renewable energy contribution, scenario comparison and battery-storage assessment. The purpose is to support reproducibility, traceability, validation and later review of Toola input data and model assumptions.",
+ "@id": "urn:flexrican:toola:data-graph:v0.1:2026-08-11",
+ "resources": [
+  {
+   "@id": "urn:flexrican:toola:resource:toola-data-relationships:v0.1",
+   "name": "toola_data_relationships",
+   "topics": [
+    "energy",
+    "emissions",
+    "electricity",
+    "metadata",
+    "ontology",
+    "FlexRICAN",
+    "Toola"
+   ],
+   "title": "FlexRICAN Toola Data Relationships",
+   "path": "urn:flexrican:toola:metadata:toola-data-relationships:v0.1",
+   "description": "Ontology-oriented relationship table describing the main entities and dependencies within the FlexRICAN Toola data architecture. Each row represents one relationship in the form subject-predicate-object. The relationship graph links source platforms, raw datasets, curated Toola input tables, assumptions, calculation steps and output indicators. The primary Ember EnergyMIX workbook is treated as the wider reference dataset. The curated carbon intensity table is treated as a Toola input dataset derived from Ember data and used to calculate country-level grid electricity emissions. The relationship graph is intended as a reproducibility and validation layer, not as a replacement for the actual source data files.",
+   "languages": [
+    "en-GB"
+   ],
+   "subject": [
+    {
+     "name": "electricity",
+     "@id": "https://openenergyplatform.org/ontology/oeo/OEO_00000139"
+    },
+    {
+     "name": "energy system model",
+     "@id": "https://openenergyplatform.org/ontology/oeo/OEO_00020103"
+    },
+    {
+     "name": "emission factor",
+     "@id": "https://openenergyplatform.org/ontology/oeo/OEO_00000148"
+    },
+    {
+     "name": "metadata",
+     "@id": "http://purl.org/dc/terms/description"
+    }
+   ],
+   "keywords": [
+    "FlexRICAN",
+    "Toola",
+    "data graph",
+    "ontology",
+    "OEMetadata",
+    "Open Energy Ontology",
+    "Ember",
+    "EnergyMIX",
+    "carbon intensity",
+    "electricity mix",
+    "battery storage",
+    "reproducibility",
+    "provenance"
+   ],
+   "publicationDate": "2026-08-11",
+   "context": {
+    "title": "FlexRICAN Toola data provenance and relationship model",
+    "homepage": "ToDo: add FlexRICAN or Toola homepage",
+    "documentation": "ToDo: add Toola methodology, README or SharePoint documentation path",
+    "sourceCode": "ToDo: add GitHub repository or internal repository path",
+    "publisher": "FlexRICAN project consortium",
+    "publisherLogo": null,
+    "contact": "ToDo: add project contact e-mail",
+    "fundingAgency": "European Union",
+    "fundingAgencyLogo": null,
+    "grantNo": "101131516"
+   },
+   "spatial": {
+    "location": {
+     "address": "European Union countries and selected comparison countries",
+     "@id": null,
+     "latitude": null,
+     "longitude": null
+    },
+    "extent": {
+     "name": "EU countries and selected comparison countries",
+     "@id": null,
+     "resolutionValue": "country",
+     "resolutionUnit": "administrative unit",
+     "boundingBox": [
+      -10.5,
+      34.8,
+      31.6,
+      71.2
+     ],
+     "crs": "EPSG:4326"
+    }
+   },
+   "temporal": {
+    "referenceDate": "2026-08-11",
+    "timeseries": [
+     {
+      "start": "2024-01-01T00:00:00+00:00",
+      "end": "2025-12-31T23:59:59+00:00",
+      "resolutionValue": "1",
+      "resolutionUnit": "year",
+      "alignment": "calendar year",
+      "aggregationType": "annual values as provided by Ember and curated for Toola input use"
+     }
+    ]
+   },
+   "sources": [
+    {
+     "title": "Ember Electricity Data Explorer",
+     "authors": [
+      "Ember"
+     ],
+     "description": "Primary data source for the EnergyMIX workbook and country-level electricity carbon intensity values. The relevant data blocks include electricity generation, capacity, demand, imports, power-sector emissions and CO2 intensity by country and year. The source data are used to create two Toola-relevant artefacts: a long-format EnergyMIX reference dataset and a curated country-level carbon intensity summary table.",
+     "publicationYear": "2025",
+     "path": "https://ember-energy.org/data/electricity-data-explorer/",
+     "sourceLicenses": [
+      {
+       "name": "CC-BY-4.0",
+       "title": "Creative Commons Attribution 4.0 International",
+       "path": "https://creativecommons.org/licenses/by/4.0/",
+       "instruction": "Credit Ember when using, sharing or adapting the data.",
+       "attribution": "Original data source: Ember",
+       "copyrightStatement": "https://ember-energy.org/creative-commons/"
+      }
+     ]
+    },
+    {
+     "title": "01_EnergyMIX_of_EU_Countries_EMBER.xlsx",
+     "authors": [
+      "FlexRICAN WP4 Team"
+     ],
+     "description": "Primary Ember-derived long-format working dataset for Toola. The workbook contains the sheet yearly_full_release_long_format with country-year observations structured by Area, ISO 3 code, Year, Area type, Continent, Ember region, EU, OECD, G20, G7, ASEAN, Category, Subcategory, Variable, Unit, Value, YoY absolute change and YoY percent change. It provides contextual information on electricity generation mix, capacity, demand, imports and power-sector emissions.",
+     "publicationYear": "2026",
+     "path": "01_EnergyMIX_of_EU_Countries_EMBER.xlsx#yearly_full_release_long_format"
+    },
+    {
+     "title": "02_Carbon_intensities_of_EU_Countries_EMBER.xlsx",
+     "authors": [
+      "FlexRICAN WP4 Team"
+     ],
+     "description": "Curated Toola input table containing country-level electricity carbon intensity values for 2024 and 2025. The table is derived from Ember data and simplified for use in Toola calculations. It contains one record per country or economy and separate year-specific carbon-intensity columns.",
+     "publicationYear": "2026",
+     "path": "02_Carbon_intensities_of_EU_Countries_EMBER.xlsx#Carbon_Final"
+    }
+   ],
+   "licenses": [
+    {
+     "name": "CC-BY-4.0",
+     "title": "Creative Commons Attribution 4.0 International",
+     "path": "https://creativecommons.org/licenses/by/4.0/",
+     "instruction": "Attribute Ember as the original data source and document FlexRICAN-specific processing separately.",
+     "attribution": "Original data source: Ember Electricity Data Explorer. Processing and metadata: FlexRICAN project consortium.",
+     "copyrightStatement": "ToDo: add project-specific copyright or reuse statement"
+    }
+   ],
+   "contributors": [
+    {
+     "title": "FlexRICAN WP4 Team",
+     "path": null,
+     "organization": "FlexRICAN project consortium",
+     "roles": [
+      "DataCollector"
+     ],
+     "date": "2026-08-11",
+     "object": "data",
+     "comment": "Manual download and collection of Ember electricity and carbon intensity data for EU countries and selected comparison countries."
+    },
+    {
+     "title": "FlexRICAN WP4 Team",
+     "path": null,
+     "organization": "FlexRICAN project consortium",
+     "roles": [
+      "DataCurator"
+     ],
+     "date": "2026-08-11",
+     "object": "data",
+     "comment": "Consolidation, filtering and transformation of raw Ember exports into Toola input datasets, including EnergyMIX context and carbon intensity summary tables."
+    },
+    {
+     "title": "FlexRICAN WP4 Team",
+     "path": null,
+     "organization": "FlexRICAN project consortium",
+     "roles": [
+      "MetadataCreator"
+     ],
+     "date": "2026-08-11",
+     "object": "metadata",
+     "comment": "Creation of OEMetadata record documenting provenance, methodology, table structure, data relationships and Toola calculation dependencies."
+    }
+   ],
+   "type": "table",
+   "format": "CSV",
+   "encoding": "UTF-8",
+   "schema": {
+    "fields": [
+     {
+      "name": "subject_id",
+      "description": "Machine-readable identifier of the source node in the Toola data graph, for example ember_energy_mix_long_format, flexrican_carbon_intensity_summary or annual_grid_emissions.",
+      "type": "string",
+      "nullable": false,
+      "unit": null,
+      "isAbout": [
+       {
+        "name": "identifier",
+        "@id": "http://purl.obolibrary.org/obo/IAO_0020000"
+       }
+      ],
+      "valueReference": []
+     },
+     {
+      "name": "subject_label",
+      "description": "Human-readable name of the source node.",
+      "type": "string",
+      "nullable": false,
+      "unit": null,
+      "isAbout": [
+       {
+        "name": "label",
+        "@id": "http://www.w3.org/2000/01/rdf-schema#label"
+       }
+      ],
+      "valueReference": []
+     },
+     {
+      "name": "subject_type",
+      "description": "Type of the source node, for example source platform, raw dataset, curated dataset, parameter, assumption, calculation step, model component or output indicator.",
+      "type": "string",
+      "nullable": false,
+      "unit": null,
+      "isAbout": [
+       {
+        "name": "class",
+        "@id": "http://www.w3.org/2000/01/rdf-schema#Class"
+       }
+      ],
+      "valueReference": [
+       {
+        "value": "source_platform",
+        "name": "Source platform",
+        "@id": null
+       },
+       {
+        "value": "raw_dataset",
+        "name": "Raw dataset",
+        "@id": null
+       },
+       {
+        "value": "curated_dataset",
+        "name": "Curated dataset",
+        "@id": null
+       },
+       {
+        "value": "output_indicator",
+        "name": "Output indicator",
+        "@id": null
+       }
+      ]
+     },
+     {
+      "name": "predicate",
+      "description": "Relationship between subject and object, for example provides, is derived from, contains variable, provides input to, is computed from, contextualises or is influenced by.",
+      "type": "string",
+      "nullable": false,
+      "unit": null,
+      "isAbout": [
+       {
+        "name": "predicate",
+        "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate"
+       }
+      ],
+      "valueReference": [
+       {
+        "value": "provides",
+        "name": "provides",
+        "@id": null
+       },
+       {
+        "value": "is_derived_from",
+        "name": "is derived from",
+        "@id": "http://www.w3.org/ns/prov#wasDerivedFrom"
+       },
+       {
+        "value": "uses_input_dataset",
+        "name": "uses input dataset",
+        "@id": null
+       },
+       {
+        "value": "is_computed_from",
+        "name": "is computed from",
+        "@id": null
+       }
+      ]
+     },
+     {
+      "name": "object_id",
+      "description": "Machine-readable identifier of the target node in the Toola data graph.",
+      "type": "string",
+      "nullable": false,
+      "unit": null,
+      "isAbout": [
+       {
+        "name": "identifier",
+        "@id": "http://purl.obolibrary.org/obo/IAO_0020000"
+       }
+      ],
+      "valueReference": []
+     },
+     {
+      "name": "object_label",
+      "description": "Human-readable name of the target node.",
+      "type": "string",
+      "nullable": false,
+      "unit": null,
+      "isAbout": [
+       {
+        "name": "label",
+        "@id": "http://www.w3.org/2000/01/rdf-schema#label"
+       }
+      ],
+      "valueReference": []
+     },
+     {
+      "name": "object_type",
+      "description": "Type of the target node, for example source platform, raw dataset, curated dataset, parameter, assumption, calculation step, model component or output indicator.",
+      "type": "string",
+      "nullable": false,
+      "unit": null,
+      "isAbout": [
+       {
+        "name": "class",
+        "@id": "http://www.w3.org/2000/01/rdf-schema#Class"
+       }
+      ],
+      "valueReference": []
+     },
+     {
+      "name": "methodological_note",
+      "description": "Explanation of the transformation, calculation dependency or methodological reason behind the relationship.",
+      "type": "string",
+      "nullable": true,
+      "unit": null,
+      "isAbout": [
+       {
+        "name": "description",
+        "@id": "http://purl.org/dc/terms/description"
+       }
+      ],
+      "valueReference": []
+     },
+     {
+      "name": "source_reference",
+      "description": "Reference to the source dataset, processing document, methodology note, SharePoint location, GitHub repository, publication or other supporting evidence.",
+      "type": "string",
+      "nullable": true,
+      "unit": null,
+      "isAbout": [
+       {
+        "name": "source",
+        "@id": "http://purl.org/dc/terms/source"
+       }
+      ],
+      "valueReference": []
+     }
+    ],
+    "primaryKey": [
+     "subject_id",
+     "predicate",
+     "object_id"
+    ],
+    "foreignKeys": []
+   },
+   "dialect": {
+    "delimiter": ",",
+    "decimalSeparator": "."
+   },
+   "review": {
+    "path": null,
+    "badge": null
+   }
+  }
+ ],
+ "metaMetadata": {
+  "metadataVersion": "OEMetadata-2.0.4",
+  "metadataLicense": {
+   "name": "CC0-1.0",
+   "title": "Creative Commons Zero v1.0 Universal",
+   "path": "https://creativecommons.org/publicdomain/zero/1.0"
+  }
+ }
+}
