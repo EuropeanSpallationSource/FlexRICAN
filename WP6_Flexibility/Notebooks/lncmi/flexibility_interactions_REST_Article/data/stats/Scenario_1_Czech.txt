@@ -1,0 +1,1 @@
+{'n_variables_total': 22685, 'n_binary': 7560, 'n_binary_declared': 0, 'n_binary_by_bounds': 7560, 'n_integer_general': 0, 'n_continuous': 15125, 'n_constraints': 27724, 'status': 'Optimal', 'solve_time_s': 1.0604019165039062}
