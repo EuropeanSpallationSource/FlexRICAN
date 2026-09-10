@@ -1,6 +1,6 @@
 
-from toolbox.units import *
-from toolbox.tools import *
+from units import *
+from tools import *
 
 def scenario(df = None, weight = 1, lp:bool = True , cop = 3, copper_coeeff = 0.045, elec_therm_ratio = 0.85, pv_co2 = 36, hp_cf = 0.2):
 
@@ -71,8 +71,8 @@ def scenario(df = None, weight = 1, lp:bool = True , cop = 3, copper_coeeff = 0.
     pv = PhotovoltaicUnit(time=time, name = "pv", profile = temp.pv.tolist(),  energy_type=elec, co2_cost_per_kw = 800000, co2_out=0)
  
 
-    grid_imp = VariableProductionUnit(time=time , name = "grid_imp" , energy_type=elec, co2_out= temp["Taux de Co2"].tolist(), binary = False)
-    grid_exp = VariableConsumptionUnit(time=time , name = "grid_exp" , energy_type=elec, co2_out= (0.5 * temp["Taux de Co2"]).tolist(), binary = False)
+    grid_imp = VariableProductionUnit(time=time , name = "grid_imp" , energy_type=elec, co2_out= temp["Taux de Co2"].tolist() )
+    grid_exp = VariableConsumptionUnit(time=time , name = "grid_exp" , energy_type=elec, co2_out= (0.5 * temp["Taux de Co2"]).tolist() )
     
     total_consumption = Quantity(name= "total_consumption_magnets", opt= True , unit = "kW" ,
                                   vlen = time.LEN, lb = 0, parent = grid_imp)
@@ -83,14 +83,14 @@ def scenario(df = None, weight = 1, lp:bool = True , cop = 3, copper_coeeff = 0.
     cst = DefinitionDynamicConstraint(name="total_consumption_cst", t_range='for t in time.I', exp_t=exp, parent=grid_imp)
     setattr(grid_imp, 'total_consumption_cst', cst)
 
-    district_heat = VariableProductionUnit(time = time, name = "district_heat" ,p_min = 0, p_max=1e9, co2_out= temp["cciag_co2"].tolist(), operating_cost=100, energy_type=thermal, e_max=None, binary = False)
+    district_heat = VariableProductionUnit(time = time, name = "district_heat" ,p_min = 0, p_max=1e9, co2_out= temp["cciag_co2"].tolist(), operating_cost=100, energy_type=thermal, e_max=None )
 
     buffer = StorageUnit(time = time , name = "heat_storage", energy_type=thermal)
     buffer.charge._add_co2_emissions(co2_out=0)
     buffer.discharge._add_co2_emissions(co2_out=0)
 
 
-    heat_dissipation = VariableConsumptionUnit(time = time, name = "heat_dissipation" , p_max =1e9, energy_type = thermal,e_max=None, binary = False )
+    heat_dissipation = VariableConsumptionUnit(time = time, name = "heat_dissipation" , p_max =1e9, energy_type = thermal,e_max=None  )
 
     cnrs_heat = FixedConsumptionUnit(time = time, name = "CNRS_heat" , p = temp["Heat_demand[kW]"].tolist(), energy_type = thermal )
 

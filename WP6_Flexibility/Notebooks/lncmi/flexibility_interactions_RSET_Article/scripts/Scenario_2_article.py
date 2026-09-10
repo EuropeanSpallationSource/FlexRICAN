@@ -1,5 +1,5 @@
-from toolbox.units import *
-from toolbox.tools import *
+from units import *
+from tools import *
 
 def scenario(df = None, weight = 1, lp:bool = True, pv_co2 = 36):
 
@@ -43,7 +43,7 @@ def scenario(df = None, weight = 1, lp:bool = True, pv_co2 = 36):
             value = [0.001 for v in value]
          
   
-        exec(f"{name}= ShiftableConsumptionUnit(time = time, name = '{name}', power_values = value,  verbose=True, binary = False)")
+        exec(f"{name}= ShiftableConsumptionUnit(time = time, name = '{name}', power_values = value,  verbose=True)")
 
 
 
@@ -57,8 +57,8 @@ def scenario(df = None, weight = 1, lp:bool = True, pv_co2 = 36):
 
     pv = PhotovoltaicUnit(time=time, name = "pv", profile = temp.pv.tolist(),  energy_type=elec, co2_cost_per_kw = 800000, co2_out=pv_co2)
 
-    grid_imp = VariableProductionUnit(time=time , name = "grid_imp" , energy_type=elec, co2_out= temp["Taux de Co2"].tolist(), binary=True)
-    grid_exp = VariableConsumptionUnit(time=time , name = "grid_exp" , energy_type=elec, co2_out= (0.5 * temp["Taux de Co2"]).tolist() , binary = True)
+    grid_imp = VariableProductionUnit(time=time , name = "grid_imp" , energy_type=elec, co2_out= temp["Taux de Co2"].tolist())
+    grid_exp = VariableConsumptionUnit(time=time , name = "grid_exp" , energy_type=elec, co2_out= (0.5 * temp["Taux de Co2"]).tolist())
 
 
     
