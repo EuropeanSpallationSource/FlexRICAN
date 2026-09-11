@@ -75,19 +75,19 @@ if __name__ == "__main__":
             df = pd.read_csv(file, sep=",", decimal=".", index_col="datetime", parse_dates=True)
         print (f"Data loaded from {file} , Starting Optimization Scenario 1 for {d_set["country"]}")
 
-        # df = df.loc["2023-01-24" : "2023-05-08 23:50"]
+        df = df.loc["2023-01-24" : "2023-05-08 23:50"]
        
 
-        # df.fillna(0, inplace = True)
+        df.fillna(0, inplace = True)
 
 
 
-        # df, stats = scenario(df, weight = 1,pv_co2 = d_set["PV_CO2"])
+        df, stats = scenario(df, weight = 1,pv_co2 = d_set["PV_CO2"])
 
-        # with open(f'data/stats/Scenario_1_{d_set["country"]}.txt', 'w') as f:
-        #     f.write(str(stats))
+        with open(f'data/stats/Scenario_1_{d_set["country"]}.txt', 'w') as f:
+            f.write(str(stats))
             
         
-        # # df.to_csv(f"{file.split('dataset')[0]}results.csv", sep=",", decimal=".", index=True, index_label="datetime")
+        # df.to_csv(f"{file.split('dataset')[0]}results.csv", sep=",", decimal=".", index=True, index_label="datetime")
 
-        # print (f"Optimization Scenario 1 completed, results saved to {file.split('dataset')[0]}results.csv")
+        print (f"Optimization Scenario 1 completed, results saved to {file.split('dataset')[0]}results.csv")
