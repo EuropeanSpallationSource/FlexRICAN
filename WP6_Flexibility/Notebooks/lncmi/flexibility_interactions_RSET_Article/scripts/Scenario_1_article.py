@@ -88,6 +88,6 @@ if __name__ == "__main__":
             f.write(str(stats))
             
         
-        # df.to_csv(f"{file.split('dataset')[0]}results.csv", sep=",", decimal=".", index=True, index_label="datetime")
+        df.to_csv(f"{file.split('dataset')[0]}results.csv", sep=",", decimal=".", index=True, index_label="datetime")
 
         print (f"Optimization Scenario 1 completed, results saved to {file.split('dataset')[0]}results.csv")
