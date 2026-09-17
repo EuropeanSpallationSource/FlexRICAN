@@ -138,8 +138,11 @@ out body;
                     self.overpass_url,
                     params={"data": query},
                     timeout=self.request_timeout,
+                    headers={
+                        "User-Agent": "SolarSite3DPlot/1.0 (contact: your_email@example.com)",
+                        "Accept": "application/json",
+                    },
                 )
-
                 if response.status_code == 504:
                     raise requests.HTTPError(
                         f"504 Server Error: Gateway Timeout for url: {response.url}",
