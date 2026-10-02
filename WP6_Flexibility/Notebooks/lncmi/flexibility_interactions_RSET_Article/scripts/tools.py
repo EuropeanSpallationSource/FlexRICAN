@@ -121,10 +121,14 @@ def post_processing(df:pd.DataFrame = pd.DataFrame()):
     df["Reference_emissions"] = df[["electric_emissions_ref", "thermal_emissions_ref"]].sum(axis = 1)
 
     df["Electricity_Consumption[kW]"] = df["Electricity_Consumption[MW]"] * 1000
-
-    df["heatpump_thermal_Power_S3_MW"] = df["heatpump_thermal_Power_S3_KW"] / 1e3
-
-    df["heatpump_thermal_Power_S4_MW"] = df["heatpump_thermal_Power_S4_KW"] / 1e3
+    try:
+        df["heatpump_thermal_Power_S3_MW"] = df["heatpump_thermal_Power_S3_KW"] / 1e3
+    except KeyError:
+        pass
+    try:
+        df["heatpump_thermal_Power_S4_MW"] = df["heatpump_thermal_Power_S4_KW"] / 1e3
+    except KeyError:
+        pass
 
     return  df
 
