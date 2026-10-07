@@ -11,7 +11,7 @@ import openmeteo_requests
 class WeatherData:
     """Retrieve and format weather data for a single location and period."""
 
-    def __init__(self, latitude: float, longitude: float, start_date: str, end_date: str,
+    def __init__(self, latitude: float, longitude: float, start_date: str, end_date: str, site:str,
                  timezone: str):
         """
         Initialize weather request settings.
@@ -38,6 +38,7 @@ class WeatherData:
 
         self._openmeteo_client = None
         self._client_retries = None
+        self.site = site
 
     def _get_openmeteo_client(self, retries: int):
         """Build and cache the Open-Meteo client to avoid session re-creation."""
@@ -89,6 +90,8 @@ class WeatherData:
         variables: Optional[Sequence[str]] = None,
         retries: int = 5,
         verbose: bool = False,
+        savefile: Optional[bool] = True, 
+        load_data_from_cache: Optional[bool] = True
     ) -> pd.DataFrame:
         """
         Fetch hourly weather data from Open-Meteo archive API.
@@ -109,49 +112,75 @@ class WeatherData:
         pandas.DataFrame
             Timezone-aware hourly weather DataFrame indexed by datetime.
         """
-        default_hourly_variables, column_map = self._get_openmeteo_defaults()
-        requested_variables = list(variables) if variables is not None else list(default_hourly_variables)
 
-        url = "https://archive-api.open-meteo.com/v1/archive"
-        params = {
-            "latitude": self.latitude,
-            "longitude": self.longitude,
-            "start_date": self.start_date,
-            "end_date": self.end_date,
-            "wind_speed_unit": wind_speed_unit,
-            "timezone": self.timezone,
-            "hourly": requested_variables,
-        }
+        if load_data_from_cache:
+            try:
+                weather = pd.read_csv(f"./data/weather/weather_data_openmeteo_{self.site}_{self.start_date}_{self.end_date}.csv", index_col=0,
+                                       parse_dates=False)
 
-        response = self._get_openmeteo_client(retries=retries).weather_api(url, params=params)[0]
+                
+                weather.index = pd.to_datetime(weather.index, utc=True).tz_convert(self.timezone)
+                
 
-        # Process first location. Add a for-loop for multiple locations or weather models
-        if verbose:
-            print(f"Coordinates {response.Latitude()}°N {response.Longitude()}°E")
-            print(f"Elevation {response.Elevation()} m asl")
-            print(f"Timezone {response.Timezone()} {response.TimezoneAbbreviation()}")
-            print(f"Timezone difference to GMT+0 {response.UtcOffsetSeconds()} s")
 
-        # Process hourly data. The order of variables needs to be the same as requested.
-        hourly = response.Hourly()
+                
+                print(f"Loaded weather data from cache for {self.site} from {self.start_date} to {self.end_date}.")
+            except FileNotFoundError:
+                print("Cache file not found. Fetching new data.")
+                load_data_from_cache = False
 
-        hourly_data = {"date": pd.date_range(
-            start=pd.to_datetime(hourly.Time(), unit="s", utc=True),
-            end=pd.to_datetime(hourly.TimeEnd(), unit="s", utc=True),
-            freq=pd.Timedelta(seconds=hourly.Interval()),
-            inclusive="left"
-        )}
+        if not load_data_from_cache:
+            default_hourly_variables, column_map = self._get_openmeteo_defaults()
+            requested_variables = list(variables) if variables is not None else list(default_hourly_variables)
 
-        for index, variable in enumerate(requested_variables):
-            column_map.setdefault(variable, variable)
-            column_name = column_map[variable]
-            hourly_data[column_name] = hourly.Variables(index).ValuesAsNumpy()
+            url = "https://archive-api.open-meteo.com/v1/archive"
+            params = {
+                "latitude": self.latitude,
+                "longitude": self.longitude,
+                "start_date": self.start_date,
+                "end_date": self.end_date,
+                "wind_speed_unit": wind_speed_unit,
+                "timezone": self.timezone,
+                "hourly": requested_variables,
+            }
+            response = self._get_openmeteo_client(retries=retries).weather_api(url, params=params)[0]
 
-        weather = pd.DataFrame(data=hourly_data)
-        weather.set_index('date', inplace=True)
+            # Process first location. Add a for-loop for multiple locations or weather models
+            if verbose:
+                print(f"Coordinates {response.Latitude()}°N {response.Longitude()}°E")
+                print(f"Elevation {response.Elevation()} m asl")
+                print(f"Timezone {response.Timezone()} {response.TimezoneAbbreviation()}")
+                print(f"Timezone difference to GMT+0 {response.UtcOffsetSeconds()} s")
 
-        target_timezone = response.Timezone() if self.timezone == "auto" else self.timezone
-        weather = weather.tz_convert(target_timezone)
+            # Process hourly data. The order of variables needs to be the same as requested.
+            hourly = response.Hourly()
+
+            hourly_data = {"date": pd.date_range(
+                start=pd.to_datetime(hourly.Time(), unit="s", utc=True),
+                end=pd.to_datetime(hourly.TimeEnd(), unit="s", utc=True),
+                freq=pd.Timedelta(seconds=hourly.Interval()),
+                inclusive="left"
+            )}
+
+            for index, variable in enumerate(requested_variables):
+                column_map.setdefault(variable, variable)
+                column_name = column_map[variable]
+                hourly_data[column_name] = hourly.Variables(index).ValuesAsNumpy()
+
+            weather = pd.DataFrame(data=hourly_data)
+            weather.set_index('date', inplace=True)
+
+            target_timezone = response.Timezone() if self.timezone == "auto" else self.timezone
+            weather = weather.tz_convert(target_timezone)
+
+
+            if savefile:
+                file_name = f"./data/weather/weather_data_openmeteo_{self.site}_{self.start_date}_{self.end_date}.csv"
+                print (f"Saving weather data to {file_name}")
+                weather.to_csv(f"{file_name}",  index=True, header=True, sep=',', decimal='.' ,index_label='datetime')
+        
+        
+                
 
         return weather
 

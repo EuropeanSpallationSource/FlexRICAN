@@ -11,6 +11,7 @@ __pycache__/
 *.log
 *.lp
 *.sol
+*copy*
 
 # Ignore the specific waste heat recovery project directory
 # Notebooks/lncmi/waste_heat_recovery_SGE_article/
